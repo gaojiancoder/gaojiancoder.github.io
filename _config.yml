@@ -44,14 +44,14 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''
@@ -106,3 +106,14 @@ deploy:
   repo: https://github.com/gaojiancoder/gaojiancoder.github.io
   branch: main
 
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
+
+postInfo:
+  date: true
+  update: false
+  wordCount: true # 设置文章字数统计为 true.
+  totalCount: true # 设置站点文章总字数统计为 true.
+  min2read: true # 阅读时长.
+  readCount: true # 阅读次数.
