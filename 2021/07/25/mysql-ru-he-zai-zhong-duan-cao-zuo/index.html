@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="我的第一篇博客, Hexo">
+    <meta name="keywords" content="“MySQL如何在终端操作”, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>我的第一篇博客 | Hexo</title>
+    <title>“MySQL如何在终端操作” | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">我的第一篇博客</h1>
+                    <h1 class="description center-align post-title">“MySQL如何在终端操作”</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-20
+                    2021-07-25
                 </div>
                 
 
@@ -452,14 +452,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5
+                    495
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -482,7 +482,31 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>真的挺难得</p>
+                <p>mysql关系型数据库<br>如何使用终端操作数据库?<br>1.如何登陆数据库。<br>首先进入终端，p后面为登陆MySQL的密码 首次进入会提示设置，如果没有则不需用输入。<br>gaojian at gaojian in ~<br>$ mysql -uroot -p12345678</p>
+<p>2.如何查询数据库服务器中所有的数据库？ show databases;</p>
+<p>mysql&gt; show databases;<br>+——————–+<br>| Database           |<br>+——————–+<br>| demo               |<br>| information_schema |<br>| mysql              |<br>| performance_schema |<br>| sys                |<br>+——————–+<br>5 rows in set (0.00 sec)</p>
+<p>3.如何选中某一个数据库进行操作</p>
+<p>————如果没有选中数据库直接进行操作</p>
+<p>mysql&gt; select*from admin；<br>ERROR 1046 (3D000): No database selected<br>会报错</p>
+<p>————SQL语句 use demo<br>mysql&gt; use demo<br>Reading table information for completion of table and column names<br>You can turn off this feature to get a quicker startup with -A</p>
+<p>Database changed<br>mysql&gt; select*from admin；<br>Empty set (0.00 sec)<br>使用use进入指定数据库</p>
+<p>————如何退出数据库服务器 exit;<br>mysql&gt; exit;<br>Bye<br>————如何在数据库服务器中创建我们的数据库？ Create database <name>;</p>
+<p>Create database <name>;</p>
+<p>mysql&gt; create database test;<br>Query OK, 1 row affected (0.00 sec)</p>
+<p>————如何查看某个数据库中所有的数据表   show tables;</p>
+<p>mysql&gt; show tables;<br>+—————-+<br>| Tables_in_test |<br>+—————-+<br>| pet            |<br>+—————-+<br>1 row in set (0.00 sec)</p>
+<p>————如何创建一个数据表 create table pet</p>
+<p>mysql&gt; create table pet(<br>    -&gt; name varchar(20),<br>    -&gt; owner varchar(20),<br>    -&gt; sex char(1),<br>    -&gt; birth date,<br>    -&gt; death date);<br>Query OK, 0 rows affected (0.01 sec)</p>
+<p>————查看创建好的数据表的结构 describe pet;</p>
+<p>mysql&gt; describe pet;<br>+——-+————-+——+—–+———+——-+<br>| Field    | Type     | Null | Key    | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| name  | varchar(20) | YES  |        | NULL    |       |<br>| owner | varchar(20) | YES  |        | NULL    |       |<br>| sex   | char(1)     | YES  |        | NULL    |       |<br>| birth | date        | YES  |        | NULL    |       |<br>| death | date        | YES  |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>5 rows in set (0.00 sec)</p>
+<p>————查看数据表中的记录 select*from pet;</p>
+<p>mysql&gt; select*from pet;<br>Empty set (0.01 sec)</p>
+<p>————如何往数据表中添加数据记录 insert into pet</p>
+<p>mysql&gt; insert into pet<br>    -&gt; values(‘bob’,’gao’,’n’,’1999-3-2’,null);<br>Query OK, 1 row affected (0.00 sec)</p>
+<p>values输入的值要与表中的位置相对应</p>
+<p>————再一次查询</p>
+<p>mysql&gt; select *from pet;<br>+——+——-+——+————+——-+<br>| name | owner | sex  | birth            | death |<br>+——+——-+——+————+——-+<br>| bob  | gao   | n      | 1999-03-02 | NULL  |<br>+——+——-+——+————+——-+<br>1 row in set (0.00 sec)</p>
+<p>——————插入新数据和添加数据一样的操作</p>
 
                 
             </div>
@@ -509,7 +533,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/20/wo-de-di-yi-pian-bo-ke/">http://example.com/2021/07/20/wo-de-di-yi-pian-bo-ke/</a>
+                    <a href="http://example.com/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/">http://example.com/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -715,7 +739,7 @@
         repo: 'gaojiancoder.github.io',
         owner: 'gaojiancoder',
         admin: "gaojiancoder",
-        id: '2021-07-20T21-38-13',
+        id: '2021-07-25T21-22-41',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -743,9 +767,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/">
                     <div class="card-image">
@@ -763,9 +788,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -774,6 +799,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -784,13 +810,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/20/hello-world/">
+                <a href="/2021/07/20/wo-de-di-yi-pian-bo-ke/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="我的第一篇博客">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">我的第一篇博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
