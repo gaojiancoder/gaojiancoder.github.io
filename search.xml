@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MySQL学习笔记3</title>
+      <link href="/2021/07/26/mysql-xue-xi-bi-ji-3/"/>
+      <url>/2021/07/26/mysql-xue-xi-bi-ji-3/</url>
+      
+        <content type="html"><![CDATA[<h1 id="MySQL建表约束-sql"><a href="#MySQL建表约束-sql" class="headerlink" title="MySQL建表约束.sql"></a>MySQL建表约束.sql</h1><h2 id="1-主键约束-primary-key——主键不能重复不能为空"><a href="#1-主键约束-primary-key——主键不能重复不能为空" class="headerlink" title="1.主键约束 primary key——主键不能重复不能为空"></a>1.主键约束 primary key——主键不能重复不能为空</h2><h3 id="添加主键"><a href="#添加主键" class="headerlink" title="添加主键"></a>添加主键</h3><p>alter table table-name add primary key(id,name);</p><h3 id="删除主键"><a href="#删除主键" class="headerlink" title="删除主键"></a>删除主键</h3><p>alter table table-name drop primary key;</p><h3 id="设置双主键-联合主键-：只要加起来不重复就可以"><a href="#设置双主键-联合主键-：只要加起来不重复就可以" class="headerlink" title="设置双主键(联合主键)：只要加起来不重复就可以"></a>设置双主键(联合主键)：只要加起来不重复就可以</h3><p>create table user(id int,name varchar(20),password varchar(20),primary key(id,name));</p><h2 id="2-自增约束-auto-increment"><a href="#2-自增约束-auto-increment" class="headerlink" title="2.自增约束 :auto-increment"></a>2.自增约束 :auto-increment</h2><p>起到管控id的作用，用在主键后面</p><h2 id="3-外键约束-foreign-key-class-id-references-classes-id"><a href="#3-外键约束-foreign-key-class-id-references-classes-id" class="headerlink" title="3.外键约束   foreign key(class-id) references classes(id)"></a>3.外键约束   foreign key(class-id) references classes(id)</h2><h3 id="涉及到两个表：主表，副表。"><a href="#涉及到两个表：主表，副表。" class="headerlink" title="涉及到两个表：主表，副表。"></a>涉及到两个表：主表，副表。</h3><pre class="line-numbers language-none"><code class="language-none">create table students(id int primary key,name varchar(20),class_id int,foreign key(class_id) references classes(id));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Query OK, 0 rows affected (0.01 sec)</p><p>主表中的记录被副表引用是不可以被删除的。</p><p>主表中没有的数据值，在副表中不可以使用。</p><h2 id="4-唯一约束-alter-table-use1-add-unique-name"><a href="#4-唯一约束-alter-table-use1-add-unique-name" class="headerlink" title="4.唯一约束 :alter table use1 add unique(name);"></a>4.唯一约束 :alter table use1 add unique(name);</h2><p>——约束修饰的字段的值不可以重复</p><pre class="line-numbers language-none"><code class="language-none">alter table use1 add unique(name);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>Query OK, 0 rows affected (0.00 sec)<br>Records: 0  Duplicates: 0  Warnings: 0</p><pre class="line-numbers language-none"><code class="language-none">desc use1;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>+——-+————-+——+—–+———+——-+<br>| Field    | Type            | Null | Key | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| id         | int               | NO   | PRI | NULL    |           |<br>| name  | varchar(20) | YES  | UNI | NULL    |           |<br>+——-+————-+——+—–+———+——-+<br>2 rows in set (0.00 sec)</p><h3 id="如何删除唯一约束"><a href="#如何删除唯一约束" class="headerlink" title="如何删除唯一约束"></a>如何删除唯一约束</h3><p>Alter table table-name drop index &lt;加了约束的字段&gt;</p><h2 id="5-非空约束-not-null"><a href="#5-非空约束-not-null" class="headerlink" title="5.非空约束 not null"></a>5.非空约束 not null</h2><h2 id="6-默认约束"><a href="#6-默认约束" class="headerlink" title="6.默认约束"></a>6.默认约束</h2><p>当我们没有插入字段值得时候，如果没有传值，就使用默认值<br>使用在每个字段的类型后面   ——default</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> nodes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL学习笔记2</title>
       <link href="/2021/07/26/mysql-xue-xi-bi-ji-2/"/>
       <url>/2021/07/26/mysql-xue-xi-bi-ji-2/</url>
