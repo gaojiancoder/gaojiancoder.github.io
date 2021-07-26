@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="“MySQL如何在终端操作”, 一个小白的成功之路">
+    <meta name="keywords" content="MySQL学习笔记2, 一个小白的成功之路">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>“MySQL如何在终端操作” | 一个小白的成功之路</title>
+    <title>MySQL学习笔记2 | 一个小白的成功之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">“MySQL如何在终端操作”</h1>
+                    <h1 class="description center-align post-title">MySQL学习笔记2</h1>
                 </div>
             </div>
         </div>
@@ -429,9 +429,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/nodes/">
+                                <span class="chip bg-color">nodes</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -443,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-25
+                    2021-07-26
                 </div>
                 
 
@@ -452,14 +456,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    495
+                    678
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -482,31 +486,21 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>mysql关系型数据库<br>如何使用终端操作数据库?<br>1.如何登陆数据库。<br>首先进入终端，p后面为登陆MySQL的密码 首次进入会提示设置，如果没有则不需用输入。<br>gaojian at gaojian in ~<br>$ mysql -uroot -p12345678</p>
-<p>2.如何查询数据库服务器中所有的数据库？ show databases;</p>
-<p>mysql&gt; show databases;<br>+——————–+<br>| Database           |<br>+——————–+<br>| demo               |<br>| information_schema |<br>| mysql              |<br>| performance_schema |<br>| sys                |<br>+——————–+<br>5 rows in set (0.00 sec)</p>
-<p>3.如何选中某一个数据库进行操作</p>
-<p>————如果没有选中数据库直接进行操作</p>
-<p>mysql&gt; select*from admin；<br>ERROR 1046 (3D000): No database selected<br>会报错</p>
-<p>————SQL语句 use demo<br>mysql&gt; use demo<br>Reading table information for completion of table and column names<br>You can turn off this feature to get a quicker startup with -A</p>
-<p>Database changed<br>mysql&gt; select*from admin；<br>Empty set (0.00 sec)<br>使用use进入指定数据库</p>
-<p>————如何退出数据库服务器 exit;<br>mysql&gt; exit;<br>Bye<br>————如何在数据库服务器中创建我们的数据库？ Create database <name>;</p>
-<p>Create database <name>;</p>
-<p>mysql&gt; create database test;<br>Query OK, 1 row affected (0.00 sec)</p>
-<p>————如何查看某个数据库中所有的数据表   show tables;</p>
-<p>mysql&gt; show tables;<br>+—————-+<br>| Tables_in_test |<br>+—————-+<br>| pet            |<br>+—————-+<br>1 row in set (0.00 sec)</p>
-<p>————如何创建一个数据表 create table pet</p>
-<p>mysql&gt; create table pet(<br>    -&gt; name varchar(20),<br>    -&gt; owner varchar(20),<br>    -&gt; sex char(1),<br>    -&gt; birth date,<br>    -&gt; death date);<br>Query OK, 0 rows affected (0.01 sec)</p>
-<p>————查看创建好的数据表的结构 describe pet;</p>
-<p>mysql&gt; describe pet;<br>+——-+————-+——+—–+———+——-+<br>| Field    | Type     | Null | Key    | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| name  | varchar(20) | YES  |        | NULL    |       |<br>| owner | varchar(20) | YES  |        | NULL    |       |<br>| sex   | char(1)     | YES  |        | NULL    |       |<br>| birth | date        | YES  |        | NULL    |       |<br>| death | date        | YES  |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>5 rows in set (0.00 sec)</p>
-<p>————查看数据表中的记录 select*from pet;</p>
-<p>mysql&gt; select*from pet;<br>Empty set (0.01 sec)</p>
-<p>————如何往数据表中添加数据记录 insert into pet</p>
-<p>mysql&gt; insert into pet<br>    -&gt; values(‘bob’,’gao’,’n’,’1999-3-2’,null);<br>Query OK, 1 row affected (0.00 sec)</p>
-<p>values输入的值要与表中的位置相对应</p>
-<p>————再一次查询</p>
-<p>mysql&gt; select *from pet;<br>+——+——-+——+————+——-+<br>| name | owner | sex  | birth            | death |<br>+——+——-+——+————+——-+<br>| bob  | gao   | n      | 1999-03-02 | NULL  |<br>+——+——-+——+————+——-+<br>1 row in set (0.00 sec)</p>
-<p>——————插入新数据和添加数据一样的操作</p>
+                <p>4.mysql常用数据类型有哪些</p>
+<p>————MySQL支持多种类型，大致可以分为三类：</p>
+<p>数值：tinyint(1字节)，smallint（2字节），mediumint（3字节），int（4字节），bigint（8字节）<br>浮点数：float（4字节），double（8字节）</p>
+<p>  TINYINT        1 byte     (-128，127)                                  (0，255)                                     小整数值<br>  SMALLINT       2 bytes    (-32 768，32 767)                            (0，65 535)                                  大整数值<br>  MEDIUMINT      3 bytes    (-8 388 608，8 388 607)                      (0，16 777 215)                              大整数值<br>  INT或INTEGER    4 bytes    (-2 147 483 648，2 147 483 647)              (0，4 294 967 295)                           大整数值<br>  BIGINT         8 bytes    (-9,223,372,036,854,775,808，9 223 372 036 854 775 807)    (0，18 446 744 073 709 551 615)              极大整数值<br>  FLOAT          4 bytes    (-3.402 823 466 E+38，-1.175 494 351 E-38)，0，(1.175 494 351 E-38，3.402 823 466 351 E+38)    0，(1.175 494 351 E-38，3.402 823 466 E+38)    单精度 浮点数值<br>  DOUBLE         8 bytes    (-1.797 693 134 862 315 7 E+308，-2.225 073 858 507 201 4 E-308)，0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)    0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)    双精度 浮点数值</p>
+<p>日期/时间：date，time，year，datetime，timestam<br>类型     字节               格式                            理解定义<br>DATE       3  1000-01-01/9999-12-31     YYYY-MM-DD           日期值<br>TIME       3  ‘-838:59:59’/‘838:59:59’  HH:MM:SS         时间值或持续时间<br>YEAR       1   1901/2155                YYYY                 年份值<br>DATETIME   8   1000-01-01 00:00:00<br>            9999-12-31 23:59:59   YYYY-MM-DD HH:MM:SS 混合日期和时间值  </p>
+<p>字符串：<br>  类型             字节                     定义<br>  CHAR          0-255 bytes              定长字符串<br>  VARCHAR       0-65535 bytes            变长字符串<br>  TINYBLOB      0-255 bytes              不超过 255 个字符的二进制字符串<br>  TINYTEXT      0-255 bytes              短文本字符串<br>  BLOB          0-65 535 bytes           二进制形式的长文本数据<br>  TEXT          0-65 535 bytes           长文本数据<br>  MEDIUMBLOB    0-16 777 215 bytes       二进制形式的中等长度文本数据<br>  MEDIUMTEXT    0-16 777 215 bytes       中等长度文本数据<br>  LONGBLOB      0-4 294 967 295 bytes    二进制形式的极大文本数据<br>  LONGTEXT      0-4 294 967 295 bytes    极大文本数据            </p>
+<p>————增加数据</p>
+<p>Insert into pet values(‘Fluffy’,’Harold’,’n’,’1999-04-23’,null)；<br>Insert into pet values(‘Fluf’,’Qing’,’f’,’1999-04-27’,null)；</p>
+<p>————删除数据</p>
+<p>mysql&gt; delete from pet where name = ‘Fluffy’;<br>Query OK, 1 row affected (0.01 sec)</p>
+<p>————修改数据</p>
+<p>mysql&gt; update pet set name = ‘旺财’ where owner = ‘gao’;<br>Query OK, 2 rows affected (0.00 sec)<br>Rows matched: 2  Changed: 2  Warnings: 0</p>
+<p>mysql&gt; select*from pet;<br>+———+——-+——+————+——-+<br>| name    | owner | sex  | birth      | death |<br>+———+——-+——+————+——-+<br>| 旺财    | gao   | m    | 1999-03-02 | NULL  |<br>| Fluf    | Qing  | m    | 1999-04-27 | NULL  |<br>| Fffy    | Wang  | f    | 1993-04-22 | NULL  |<br>| Fdsdffy | Jian  | f    | 1996-09-02 | NULL  |<br>| 旺财    | Gao   | m    | 1945-10-02 | NULL  |<br>+———+——-+——+————+——-+<br>5 rows in set (0.00 sec)</p>
+<p>————总结一些：数据记录常见操作</p>
+<p>——增加： insert into &lt;表name&gt;  values（）；<br>——删除：delete from &lt;表name&gt; where ……<br>——修改：update &lt;表name&gt; set<br>——查找：select*from &lt;表name&gt;</p>
 
                 
             </div>
@@ -533,7 +527,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/">http://example.com/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/</a>
+                    <a href="http://example.com/2021/07/26/mysql-xue-xi-bi-ji-2/">http://example.com/2021/07/26/mysql-xue-xi-bi-ji-2/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,7 +564,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/nodes/">
+                                    <span class="chip bg-color">nodes</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -739,7 +737,7 @@
         repo: 'gaojiancoder.github.io',
         owner: 'gaojiancoder',
         admin: "gaojiancoder",
-        id: '2021-07-25T21-22-41',
+        id: '2021-07-26T22-51-08',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -767,9 +765,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/07/26/mysql-xue-xi-bi-ji-2/">
                     <div class="card-image">
@@ -787,9 +786,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-26
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -798,6 +797,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -813,7 +813,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/">
@@ -843,7 +843,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>

@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MySQL学习笔记2</title>
+      <link href="/2021/07/26/mysql-xue-xi-bi-ji-2/"/>
+      <url>/2021/07/26/mysql-xue-xi-bi-ji-2/</url>
+      
+        <content type="html"><![CDATA[<p>4.mysql常用数据类型有哪些</p><p>————MySQL支持多种类型，大致可以分为三类：</p><p>数值：tinyint(1字节)，smallint（2字节），mediumint（3字节），int（4字节），bigint（8字节）<br>浮点数：float（4字节），double（8字节）</p><p>  TINYINT        1 byte     (-128，127)                                  (0，255)                                     小整数值<br>  SMALLINT       2 bytes    (-32 768，32 767)                            (0，65 535)                                  大整数值<br>  MEDIUMINT      3 bytes    (-8 388 608，8 388 607)                      (0，16 777 215)                              大整数值<br>  INT或INTEGER    4 bytes    (-2 147 483 648，2 147 483 647)              (0，4 294 967 295)                           大整数值<br>  BIGINT         8 bytes    (-9,223,372,036,854,775,808，9 223 372 036 854 775 807)    (0，18 446 744 073 709 551 615)              极大整数值<br>  FLOAT          4 bytes    (-3.402 823 466 E+38，-1.175 494 351 E-38)，0，(1.175 494 351 E-38，3.402 823 466 351 E+38)    0，(1.175 494 351 E-38，3.402 823 466 E+38)    单精度 浮点数值<br>  DOUBLE         8 bytes    (-1.797 693 134 862 315 7 E+308，-2.225 073 858 507 201 4 E-308)，0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)    0，(2.225 073 858 507 201 4 E-308，1.797 693 134 862 315 7 E+308)    双精度 浮点数值</p><p>日期/时间：date，time，year，datetime，timestam<br>类型     字节               格式                            理解定义<br>DATE       3  1000-01-01/9999-12-31     YYYY-MM-DD           日期值<br>TIME       3  ‘-838:59:59’/‘838:59:59’  HH:MM:SS         时间值或持续时间<br>YEAR       1   1901/2155                YYYY                 年份值<br>DATETIME   8   1000-01-01 00:00:00<br>            9999-12-31 23:59:59   YYYY-MM-DD HH:MM:SS 混合日期和时间值  </p><p>字符串：<br>  类型             字节                     定义<br>  CHAR          0-255 bytes              定长字符串<br>  VARCHAR       0-65535 bytes            变长字符串<br>  TINYBLOB      0-255 bytes              不超过 255 个字符的二进制字符串<br>  TINYTEXT      0-255 bytes              短文本字符串<br>  BLOB          0-65 535 bytes           二进制形式的长文本数据<br>  TEXT          0-65 535 bytes           长文本数据<br>  MEDIUMBLOB    0-16 777 215 bytes       二进制形式的中等长度文本数据<br>  MEDIUMTEXT    0-16 777 215 bytes       中等长度文本数据<br>  LONGBLOB      0-4 294 967 295 bytes    二进制形式的极大文本数据<br>  LONGTEXT      0-4 294 967 295 bytes    极大文本数据            </p><p>————增加数据</p><p>Insert into pet values(‘Fluffy’,’Harold’,’n’,’1999-04-23’,null)；<br>Insert into pet values(‘Fluf’,’Qing’,’f’,’1999-04-27’,null)；</p><p>————删除数据</p><p>mysql&gt; delete from pet where name = ‘Fluffy’;<br>Query OK, 1 row affected (0.01 sec)</p><p>————修改数据</p><p>mysql&gt; update pet set name = ‘旺财’ where owner = ‘gao’;<br>Query OK, 2 rows affected (0.00 sec)<br>Rows matched: 2  Changed: 2  Warnings: 0</p><p>mysql&gt; select*from pet;<br>+———+——-+——+————+——-+<br>| name    | owner | sex  | birth      | death |<br>+———+——-+——+————+——-+<br>| 旺财    | gao   | m    | 1999-03-02 | NULL  |<br>| Fluf    | Qing  | m    | 1999-04-27 | NULL  |<br>| Fffy    | Wang  | f    | 1993-04-22 | NULL  |<br>| Fdsdffy | Jian  | f    | 1996-09-02 | NULL  |<br>| 旺财    | Gao   | m    | 1945-10-02 | NULL  |<br>+———+——-+——+————+——-+<br>5 rows in set (0.00 sec)</p><p>————总结一些：数据记录常见操作</p><p>——增加： insert into &lt;表name&gt;  values（）；<br>——删除：delete from &lt;表name&gt; where ……<br>——修改：update &lt;表name&gt; set<br>——查找：select*from &lt;表name&gt;</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> nodes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>“MySQL如何在终端操作”</title>
       <link href="/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/"/>
       <url>/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/</url>
