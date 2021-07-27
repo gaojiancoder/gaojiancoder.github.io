@@ -456,7 +456,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    466
+                    499
                 </div>
                 
 
@@ -517,7 +517,8 @@ Id int primary key,
 Name varchar(20)
 );<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 <p>mysql&gt; desc customer;;<br>+——-+————-+——+—–+———+——-+<br>| Field   | Type            | Null    | Key | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| Id        | int               | NO     | PRI | NULL    |       |<br>| Name  | varchar(20) | YES   |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>2 rows in set (0.01 sec)<br>——分成三个表后，满足第二范式的设计</p>
-<h2 id="第三范式3NF"><a href="#第三范式3NF" class="headerlink" title="第三范式3NF"></a>第三范式3NF</h2><p>——必须先满足第二范式，除主键外 不能有传递依赖关系。</p>
+<h2 id="第三范式3NF"><a href="#第三范式3NF" class="headerlink" title="第三范式3NF"></a>第三范式3NF</h2><p>——必须先满足第二范式，除主键外不能有传递依赖关系。</p>
+<h3 id="什么是传递依赖"><a href="#什么是传递依赖" class="headerlink" title="什么是传递依赖"></a>什么是传递依赖</h3><p>通俗的讲就是 a—&gt;b,b—&gt;c,a可以借着b推出c 这就是传递依赖</p>
 
                 
             </div>
