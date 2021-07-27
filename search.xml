@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>MySQL学习笔记4</title>
+      <link href="/2021/07/27/mysql-xue-xi-bi-ji-4/"/>
+      <url>/2021/07/27/mysql-xue-xi-bi-ji-4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="数据库的三大范式"><a href="#数据库的三大范式" class="headerlink" title="数据库的三大范式"></a>数据库的三大范式</h1><h2 id="第一范式-1NF"><a href="#第一范式-1NF" class="headerlink" title="第一范式 1NF"></a>第一范式 1NF</h2><pre class="line-numbers language-none"><code class="language-none">select*from student2;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>+——+———–+———————————————–+<br>| id   | name       | address                                                |<br>+——+———–+———————————————–+<br>|    2 | 张胜男     | 中国黑龙江省哈尔滨市向阳区50号      |<br>|    3 | 张胜男     | 中国黑龙江省哈尔滨市武侯区90号      |<br>|    1 | 吴刚        | 中国黑龙江省哈尔滨市高新区100号    |<br>+——+———–+———————————————–+<br>3 rows in set (0.00 sec)</p><p>这种还可以拆分的不属于第一范式</p><p>+—-+———–+——–+————–+————–+—————-+<br>| id | name      | cuntry | privence     | city              | details              |<br>+—-+———–+——–+————–+————–+—————-+<br>|  1 | 张三        | 中国   | 黑龙江省     | 哈尔滨市     | 向阳区50号     |<br>|  2 | 旺盛达    | 中国   | 黑龙江省     | 哈尔滨市     | 向阳区50号     |<br>|  3 | 张胜男    | 中国   | 黑龙江省     | 哈尔滨市     | 向阳区40号     |<br>+—-+———–+——–+————–+————–+—————-+<br>3 rows in set (0.00 sec)</p><p>达到不可拆分时为第一范式</p><h2 id="第二范式2NF"><a href="#第二范式2NF" class="headerlink" title="第二范式2NF"></a>第二范式2NF</h2><p>必须满足第一范式前提下，2NF要求除主键外的每一列都必须完全依赖于主键。</p><p>如果出现不完全依赖只可能发生在联合主键的情况下。</p><h3 id="示例——订单表"><a href="#示例——订单表" class="headerlink" title="示例——订单表"></a>示例——订单表</h3><pre class="line-numbers language-none"><code class="language-none">create table myorder(product_id int,customer_id int,product_name varchar(20),customer_name varchar(20),primary key(product_id,customer_id));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>mysql&gt; desc myorder;<br>+—————+————-+——+—–+———+——-+<br>| Field                   | Type            | Null  | Key   | Default | Extra |<br>+—————+————-+——+—–+———+——-+<br>| product_id          | int                | NO   | PRI  | NULL    |          |<br>| customer_id       | int                | NO    | PRI  | NULL    |          |<br>| product_name    | varchar(20) | YES   |         | NULL    |           |<br>| customer_name | varchar(20) | YES   |         | NULL    |           |<br>+—————+————-+——+—–+———+——-+<br>4 rows in set (0.00 sec)<br>不满足第二范式，需要进行拆表</p><pre class="line-numbers language-none"><code class="language-none">create table myorder1(Order_id int primary key,product_id int,Customer_id int );<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>mysql&gt; desc myorder1;<br>+————-+——+——+—–+———+——-+<br>| Field              | Type | Null | Key | Default | Extra |<br>+————-+——+——+—–+———+——-+<br>| Order_id        | int  | NO    | PRI | NULL    |       |<br>| product_id     | int  | YES  |        | NULL    |       |<br>| Customer_id | int  | YES   |        | NULL    |       |<br>+————-+——+——+—–+———+——-+<br>3 rows in set (0.00 sec</p><pre class="line-numbers language-none"><code class="language-none">create table product(id int primary key,Name varchar(20));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>mysql&gt; desc product;<br>+——-+————-+——+—–+———+——-+<br>| Field    | Type            | Null | Key | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| id         | int               | NO   | PRI | NULL    |       |<br>| Name  | varchar(20) | YES  |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>2 rows in set (0.00 sec)</p><pre class="line-numbers language-none"><code class="language-none">create table customer(Id int primary key,Name varchar(20));<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>mysql&gt; desc customer;;<br>+——-+————-+——+—–+———+——-+<br>| Field   | Type            | Null    | Key | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| Id        | int               | NO     | PRI | NULL    |       |<br>| Name  | varchar(20) | YES   |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>2 rows in set (0.01 sec)<br>——分成三个表后，满足第二范式的设计</p><h2 id="第三范式3NF"><a href="#第三范式3NF" class="headerlink" title="第三范式3NF"></a>第三范式3NF</h2><p>——必须先满足第二范式，除主键外 不能有传递依赖关系。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> nodes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL学习笔记3</title>
       <link href="/2021/07/26/mysql-xue-xi-bi-ji-3/"/>
       <url>/2021/07/26/mysql-xue-xi-bi-ji-3/</url>
