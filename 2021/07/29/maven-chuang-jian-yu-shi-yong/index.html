@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="“MySQL如何在终端操作”, 一个小白的成功之路">
+    <meta name="keywords" content="maven创建与使用, 一个小白的成功之路">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>“MySQL如何在终端操作” | 一个小白的成功之路</title>
+    <title>maven创建与使用 | 一个小白的成功之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">“MySQL如何在终端操作”</h1>
+                    <h1 class="description center-align post-title">maven创建与使用</h1>
                 </div>
             </div>
         </div>
@@ -429,9 +429,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/notes/">
+                                <span class="chip bg-color">notes</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -443,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-25
+                    2021-07-29
                 </div>
                 
 
@@ -452,14 +456,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    495
+                    442
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -482,31 +486,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>mysql关系型数据库<br>如何使用终端操作数据库?<br>1.如何登陆数据库。<br>首先进入终端，p后面为登陆MySQL的密码 首次进入会提示设置，如果没有则不需用输入。<br>gaojian at gaojian in ~<br>$ mysql -uroot -p12345678</p>
-<p>2.如何查询数据库服务器中所有的数据库？ show databases;</p>
-<p>mysql&gt; show databases;<br>+——————–+<br>| Database           |<br>+——————–+<br>| demo               |<br>| information_schema |<br>| mysql              |<br>| performance_schema |<br>| sys                |<br>+——————–+<br>5 rows in set (0.00 sec)</p>
-<p>3.如何选中某一个数据库进行操作</p>
-<p>————如果没有选中数据库直接进行操作</p>
-<p>mysql&gt; select*from admin；<br>ERROR 1046 (3D000): No database selected<br>会报错</p>
-<p>————SQL语句 use demo<br>mysql&gt; use demo<br>Reading table information for completion of table and column names<br>You can turn off this feature to get a quicker startup with -A</p>
-<p>Database changed<br>mysql&gt; select*from admin；<br>Empty set (0.00 sec)<br>使用use进入指定数据库</p>
-<p>————如何退出数据库服务器 exit;<br>mysql&gt; exit;<br>Bye<br>————如何在数据库服务器中创建我们的数据库？ Create database <name>;</p>
-<p>Create database <name>;</p>
-<p>mysql&gt; create database test;<br>Query OK, 1 row affected (0.00 sec)</p>
-<p>————如何查看某个数据库中所有的数据表   show tables;</p>
-<p>mysql&gt; show tables;<br>+—————-+<br>| Tables_in_test |<br>+—————-+<br>| pet            |<br>+—————-+<br>1 row in set (0.00 sec)</p>
-<p>————如何创建一个数据表 create table pet</p>
-<p>mysql&gt; create table pet(<br>    -&gt; name varchar(20),<br>    -&gt; owner varchar(20),<br>    -&gt; sex char(1),<br>    -&gt; birth date,<br>    -&gt; death date);<br>Query OK, 0 rows affected (0.01 sec)</p>
-<p>————查看创建好的数据表的结构 describe pet;</p>
-<p>mysql&gt; describe pet;<br>+——-+————-+——+—–+———+——-+<br>| Field    | Type     | Null | Key    | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| name  | varchar(20) | YES  |        | NULL    |       |<br>| owner | varchar(20) | YES  |        | NULL    |       |<br>| sex   | char(1)     | YES  |        | NULL    |       |<br>| birth | date        | YES  |        | NULL    |       |<br>| death | date        | YES  |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>5 rows in set (0.00 sec)</p>
-<p>————查看数据表中的记录 select*from pet;</p>
-<p>mysql&gt; select*from pet;<br>Empty set (0.01 sec)</p>
-<p>————如何往数据表中添加数据记录 insert into pet</p>
-<p>mysql&gt; insert into pet<br>    -&gt; values(‘bob’,’gao’,’n’,’1999-3-2’,null);<br>Query OK, 1 row affected (0.00 sec)</p>
-<p>values输入的值要与表中的位置相对应</p>
-<p>————再一次查询</p>
-<p>mysql&gt; select *from pet;<br>+——+——-+——+————+——-+<br>| name | owner | sex  | birth            | death |<br>+——+——-+——+————+——-+<br>| bob  | gao   | n      | 1999-03-02 | NULL  |<br>+——+——-+——+————+——-+<br>1 row in set (0.00 sec)</p>
-<p>——————插入新数据和添加数据一样的操作</p>
+                <h2 id="1下载maven"><a href="#1下载maven" class="headerlink" title="1下载maven"></a>1下载maven</h2><p>输入以下网址进入maven官网 </p>
+<pre class="line-numbers language-none"><code class="language-none">maven.apache.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/2.png"><br>点击进入Download下滑找到第一个是Linux第二个是Windows版本<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/3.png"><br>下载完解压即可</p>
+<h2 id="2配置path和环境路径"><a href="#2配置path和环境路径" class="headerlink" title="2配置path和环境路径"></a>2配置path和环境路径</h2><p>在终端输入mvn确定mvn是否配置了环境变量<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/1.png"><br>这是已经配置完成可以直接使用mvn。<br>如果没有出现该界面则到下载解压文件所在位置将路径加入到path中即可<br>输入该命令下载maven运行环境.m2路径</p>
+<pre class="line-numbers language-none"><code class="language-none">mvn help:system<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/4.png"><br>运行完毕   将下载解压下的文件settings.xml移动到.m2中</p>
+<h2 id="3创建maven-IDE运行模板"><a href="#3创建maven-IDE运行模板" class="headerlink" title="3创建maven IDE运行模板"></a>3创建maven IDE运行模板</h2><p>创建一个新文件夹在当前文件夹中输入</p>
+<pre class="line-numbers language-none"><code class="language-none">mvn archetype:generate -DgroupId&#x3D;io.gaojian -DartifactId&#x3D;demo -DarchetypeArtifactId&#x3D;maven-archetype-quickstart -DarchetypeVersion&#x3D;1.4 -DinteractiveMode&#x3D;false<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>输入此配置为不需要交互一切按默认设置算<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/5.png"></p>
+<pre class="line-numbers language-none"><code class="language-none">mvn archetype:generate -DarchetypeArtifactId&#x3D;maven-archetype-quickstart -DarchetypeVersion&#x3D;1.4  <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>此配置为交互模式，模板名称，项目名称，版本号可以自己设置<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/6.png"><br>模板名称要倒写，创建完毕</p>
+<h2 id="4-IDE运行"><a href="#4-IDE运行" class="headerlink" title="4.IDE运行"></a>4.IDE运行</h2><p>进入IDE 找到open 打开<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/7.png"><br>找到创建模板的文件夹位置点击open<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/8.png"><br>即操作完成</p>
+<h2 id="5-maven操作"><a href="#5-maven操作" class="headerlink" title="5.maven操作"></a>5.maven操作</h2><p>可以在软件最右边找到maven按钮 会出现快捷操作按钮<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/9.png"><br>双击即可运行<br>也可以通过terminal来输入mvn语句执行<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/10.png"></p>
+<h2 id="6-打包与运行"><a href="#6-打包与运行" class="headerlink" title="6.打包与运行"></a>6.打包与运行</h2><p>当运用maven写完一个程序或者项目时需要将成品发送给需要的人 这时就需要打包<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/11.png"><br>maven中install提供了打包的程序双击执行这时文件夹下会出现target文件夹 这就是已经打包完毕可以传输的了<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/12.png"><br>在当前文件下可用java -cp+项目名-版本号.jar +模板名.app来执行<br><img src="/2021/07/29/maven-chuang-jian-yu-shi-yong/13.png"></p>
 
                 
             </div>
@@ -533,7 +526,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/">http://example.com/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/</a>
+                    <a href="http://example.com/2021/07/29/maven-chuang-jian-yu-shi-yong/">http://example.com/2021/07/29/maven-chuang-jian-yu-shi-yong/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,7 +563,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/notes/">
+                                    <span class="chip bg-color">notes</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -739,7 +736,7 @@
         repo: 'gaojiancoder.github.io',
         owner: 'gaojiancoder',
         admin: "gaojiancoder",
-        id: '2021-07-25T21-22-41',
+        id: '2021-07-29T10-21-26',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -767,17 +764,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/26/mysql-xue-xi-bi-ji-2/">
+                <a href="/2021/07/29/maven-chuang-jian-yu-shi-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="MySQL学习笔记2">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="maven创建与使用">
                         
-                        <span class="card-title">MySQL学习笔记2</span>
+                        <span class="card-title">maven创建与使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -787,9 +785,55 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-26
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Gao Jian
+                            
                         </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/notes/">
+                        <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/07/27/mysql-xue-xi-bi-ji-4/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="MySQL学习笔记4">
+                        
+                        <span class="card-title">MySQL学习笔记4</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-27
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -801,49 +845,11 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/nodes/">
-                        <span class="chip bg-color">nodes</span>
+                    <a href="/tags/notes/">
+                        <span class="chip bg-color">notes</span>
                     </a>
                     
                 </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="“MySQL如何在终端操作”">
-                        
-                        <span class="card-title">“MySQL如何在终端操作”</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Gao Jian
-                            
-                        </span>
-                    </div>
-                </div>
-
                 
             </div>
         </div>
@@ -1046,7 +1052,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">1.9k</span>
+                        class="white-color">2.4k</span>
             
             
             
