@@ -7,7 +7,7 @@ mathjax: true
 date: 2021-07-26 22:51:08
 password:
 summary:
-tags: nodes
+tags: notes
 categories:
 ---
 4.mysql常用数据类型有哪些

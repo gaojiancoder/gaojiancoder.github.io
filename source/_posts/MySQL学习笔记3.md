@@ -7,7 +7,7 @@ mathjax: true
 date: 2021-07-26 23:21:33
 password:
 summary:
-tags: nodes
+tags: notes
 categories:
 ---
 # MySQL建表约束.sql

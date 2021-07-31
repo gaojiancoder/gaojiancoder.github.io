@@ -1,5 +1,5 @@
 ---
-title: “MySQL如何在终端操作”
+title: “MySQL如何在终端操作1”
 top: false
 cover: false
 toc: true
@@ -7,7 +7,7 @@ mathjax: true
 date: 2021-07-25 21:22:41
 password:
 summary:
-tags:
+tags: notes
 categories:
 ---
 mysql关系型数据库

@@ -7,7 +7,7 @@ mathjax: true
 date: 2021-07-27 10:14:30
 password:
 summary:
-tags: nodes
+tags: notes
 categories:
 ---
 # 数据库的三大范式
