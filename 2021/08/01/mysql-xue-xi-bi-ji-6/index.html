@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL学习笔记2, 一个小白的成功之路">
+    <meta name="keywords" content="MySQL学习笔记6, 一个小白的成功之路">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MySQL学习笔记2 | 一个小白的成功之路</title>
+    <title>MySQL学习笔记6 | 一个小白的成功之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MySQL学习笔记2</h1>
+                    <h1 class="description center-align post-title">MySQL学习笔记6</h1>
                 </div>
             </div>
         </div>
@@ -429,13 +429,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/notes/">
-                                <span class="chip bg-color">notes</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -447,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-26
+                    2021-08-01
                 </div>
                 
 
@@ -456,7 +452,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    605
+                    911
                 </div>
                 
 
@@ -491,20 +487,47 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>4.mysql常用数据类型有哪些</p>
-<p>————MySQL支持多种类型，大致可以分为三类：</p>
-<p>数值：tinyint(1字节)，smallint（2字节），mediumint（3字节），int（4字节），bigint（8字节）<br>浮点数：float（4字节），double（8字节）<br>类型                              字节                                   大小                                                  理解<br>TINYINT            1 byte                  (-128，127)            (0，255)                                      小整数值<br>SMALLINT          2 bytes    (-32 768，32 767)            (0，65 535)                               大整数值<br>MEDIUMINT       3 bytes    (-8 388 608，8 388 607)      (0，16 777 215)                  大整数值<br>INT或INTEGER   4 bytes    (-2 147 483 648，2 147 483 647) (0，4 294 967 295)    大整数值<br>BIGINT             8 bytes    (-9,223,372,036,854,775,808，9 223 372 036 854 775 807) 极大整数值<br>FLOAT              4 bytes    (-3.4E+38，-1.1E-38)，0，(1.17E-38，3.4E+38)      单精度 浮点数值<br>DOUBLE             8 bytes    (-1.7E+308,-2.2E-308),0,(2.2E-308，1.7E+308)           双精度 浮点数值</p>
-<p>日期/时间：date，time，year，datetime，timestam<br>类型            字节               格式                                                      理解定义<br>DATE            3  1000-01-01/9999-12-31     YYYY-MM-DD            日期值<br>TIME            3  ‘-838:59:59’/‘838:59:59’  HH:MM:SS             时间值或持续时间<br>YEAR           1   1901/2155                YYYY                                    年份值<br>DATETIME   8   1000-01-01 00:00:00\9999-12-31 23:59:59   YYYY-MM-DD HH:MM:SS 混合日期</p>
-<p>字符串：<br>  类型                           字节                                                       定义<br>  CHAR                  0-255 bytes                                             定长字符串<br>  VARCHAR               0-65535 bytes                                    变长字符串<br>  TINYBLOB              0-255 bytes                              不超过 255 个字符的二进制字符串<br>  TINYTEXT              0-255 bytes                                        短文本字符串<br>  BLOB                  0-65 535 bytes                            二进制形式的长文本数据<br>  TEXT                  0-65 535 bytes                                   长文本数据<br>  MEDIUMBLOB    0-16 777 215 bytes                  二进制形式的中等长度文本数据<br>  MEDIUMTEXT    0-16 777 215 bytes                            中等长度文本数据<br>  LONGBLOB      0-4 294 967 295 bytes                 二进制形式的极大文本数据<br>  LONGTEXT        0-4 294 967 295 bytes                         极大文本数据            </p>
-<p>————增加数据</p>
-<p>Insert into pet values(‘Fluffy’,’Harold’,’n’,’1999-04-23’,null)；<br>Insert into pet values(‘Fluf’,’Qing’,’f’,’1999-04-27’,null)；</p>
-<p>————删除数据</p>
-<p>mysql&gt; delete from pet where name = ‘Fluffy’;<br>Query OK, 1 row affected (0.01 sec)</p>
-<p>————修改数据</p>
-<p>mysql&gt; update pet set name = ‘旺财’ where owner = ‘gao’;<br>Query OK, 2 rows affected (0.00 sec)<br>Rows matched: 2  Changed: 2  Warnings: 0</p>
-<p>mysql&gt; select*from pet;<br>+———+——-+——+————+——-+<br>| name    | owner    | sex  | birth            | death |<br>+———+——-+——+————+——-+<br>| 旺财      | gao       | m     | 1999-03-02 | NULL  |<br>| Fluf       | Qing      | m     | 1999-04-27 | NULL  |<br>| Fffy       | Wang     | f      | 1993-04-22 | NULL  |<br>| Fdsdffy | Jian       | f       | 1996-09-02 | NULL  |<br>| 旺财      | Gao       | m    | 1945-10-02 | NULL  |<br>+———+——-+——+————+——-+<br>5 rows in set (0.00 sec)</p>
-<p>————总结一些：数据记录常见操作</p>
-<p>——增加： insert into &lt;表name&gt;  values（）；<br>——删除：delete from &lt;表name&gt; where ……<br>——修改：update &lt;表name&gt; set<br>——查找：select*from &lt;表name&gt;</p>
+                <h1 id="——SQL的四种连接查询"><a href="#——SQL的四种连接查询" class="headerlink" title="——SQL的四种连接查询"></a>——SQL的四种连接查询</h1><h3 id="内连接"><a href="#内连接" class="headerlink" title="内连接"></a>内连接</h3><p>inner join 或者join</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table person(
+id int,
+name varchar(20),
+cardId int);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table card(
+id int,
+name varchar(20)
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into card values(1,&#39;饭卡&#39;);
+insert into card values(2,&#39;建行卡);
+insert into card values(3,&#39;农行卡&#39;);
+insert into card values(4,&#39;工商卡&#39;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into person values(1,&#39; 张三&#39;,1);
+insert into person values(2,&#39;李四&#39;,3);
+insert into person values(3,&#39;王五&#39;,6);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select*from person inner join card on person.cardId&#x3D;card.id;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>+——+——–+——–+——+———–+<br>| id   | name   | cardId | id   | name      |<br>+——+——–+——–+——+———–+<br>|    1 | 张三   |      1 |    1 | 饭卡      |<br>|    2 | 李四   |      3 |    3 | 农行卡    |<br>+——+——–+——–+——+———–+<br>2 rows in set (0.00 sec)<br>内联查询就是两张表中的数据通过某个字段相对查询出相关记录数据</p>
+<h3 id="外连接"><a href="#外连接" class="headerlink" title="外连接"></a>外连接</h3><p>左连接left join 或者 left outer join<br>右连接right join 或 right outer join<br>完全外连接 full join 或full outer join——————mysql暂不支持</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select*from person left join card on person.cardId&#x3D;card.id;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>+——+——–+——–+——+———–+<br>| id   | name   | cardId | id   | name      |<br>+——+——–+——–+——+———–+<br>|    1 | 张三   |      1 |    1 | 饭卡      |<br>|    2 | 李四   |      3 |    3 | 农行卡    |<br>|    2 | 李四   |      3 |    3 | 农行卡    |<br>|    3 | 王五   |      6 | NULL | NULL      |<br>+——+——–+——–+——+———–+<br>4 rows in set (0.00 sec)<br>会把左边表里的数据取出来右边表中的数据有就显示出来没有就null。right join 咋刚刚相反</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select*from person right join card on person.cardId&#x3D;card.id;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>+——+——–+——–+——+———–+<br>| id   | name   | cardId | id   | name      |<br>+——+——–+——–+——+———–+<br>|    1 | 张三   |      1 |    1 | 饭卡      |<br>| NULL | NULL   |   NULL |    2 | 建行卡    |<br>|    2 | 李四   |      3 |    3 | 农行卡    |<br>| NULL | NULL   |   NULL |    4 | 工商卡    |<br>|    2 | 李四   |      3 |    3 | 农行卡    |<br>+——+——–+——–+——+———–+<br>5 rows in set (0.00 sec)</p>
+<h2 id="MySQL事务"><a href="#MySQL事务" class="headerlink" title="MySQL事务"></a>MySQL事务</h2><p>事务是一个最小的不可分割的工作单元，事务能够保证一个业务的完整性。为的就是多条语句能同时成功或者同时失败。</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select @@autocommit;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>+————–+<br>| @@autocommit |<br>+————–+<br>|            1 |<br>+————–+<br>1 row in set (0.00 sec)<br>默认事务开启的作用是什么？<br>当我们去执行一个sql语句的时候，效果会立即体现出来，且不能回滚</p>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create database bank;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>创建数据库</p>
+<pre class="line-numbers language-my" data-language="my"><code class="language-my">create table user(
+id int primary key,
+name varchar(20),
+money int
+);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">insert into user values(1,&#39;a&#39;,1000);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">select*from user;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>+—-+——+——-+<br>| id | name | money |<br>+—-+——+——-+<br>|  1 | a    |  1000 |<br>+—-+——+——-+<br>rollback事务回滚（撤销上一句操作）</p>
+<h3 id="事务的四大特征"><a href="#事务的四大特征" class="headerlink" title="事务的四大特征"></a>事务的四大特征</h3><p>A  原子性：事务是最小的单位，不可分割<br>C 一致性：事务要求，同一事务中的sql语句，必须保证同时成功或者失败<br>I 隔离性：事务1和事务2之间具有隔离性<br>D  持久性：事务一旦结束，就不可回滚</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>事务开启：<br>1修改默认提交 set autocommit = 0<br>2 begin；<br>3 start transaaction;<br>事务手动提交：commit；<br>事务手动回滚：rollback；</p>
+<h3 id="事务的隔离性"><a href="#事务的隔离性" class="headerlink" title="事务的隔离性"></a>事务的隔离性</h3><p>1,read uncommitted    读未提交的<br>2,read committed     读已经提交的<br>3,repeatable read     可以重复读<br>4,serializable         串行化</p>
+<h3 id="如何查看数据库隔离级别"><a href="#如何查看数据库隔离级别" class="headerlink" title="如何查看数据库隔离级别"></a>如何查看数据库隔离级别</h3><p>MySQL 8.0 ：<br>select @@global.transaction_isolation;————系统级别的<br>select @@transaction_isolation;————会话级别的<br>MySQL5.x：<br>select @@global.tx_isolation;————系统级别的<br>select @@tx_isolation;————会话级别的<br>如何修改隔离级别<br>set global transaction isolation level 隔离级别;</p>
+<h3 id="隔离性解析"><a href="#隔离性解析" class="headerlink" title="隔离性解析"></a>隔离性解析</h3><p>1—  会出现脏读  既a提交可以回滚的数据b在另一边看到了 之后a回滚<br>2—   会出现不可重复读  既a提交了不可回滚 b也提交 会出现时差性前后看到不一致<br>3—   a在一边提交 b在另一边看不见 但是如果提交相同的会出现错误提示已提交过来  这叫做幻读<br>4—   a开启事务 start transaaction;写入操作 ，b也开启事务写入操作 a不commit结束事务操作b就无法执行语句<br>多个人同时只能一人进行操作 其他人会进入排队状态（串行化）。<br>—串行化带来的问题是性能差</p>
 
                 
             </div>
@@ -531,7 +554,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/26/mysql-xue-xi-bi-ji-2/">http://example.com/2021/07/26/mysql-xue-xi-bi-ji-2/</a>
+                    <a href="http://example.com/2021/08/01/mysql-xue-xi-bi-ji-6/">http://example.com/2021/08/01/mysql-xue-xi-bi-ji-6/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -568,11 +591,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/notes/">
-                                    <span class="chip bg-color">notes</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -615,7 +634,7 @@
         repo: 'gaojiancoder.github.io',
         owner: 'gaojiancoder',
         admin: "gaojiancoder",
-        id: '2021-07-26T22-51-08',
+        id: '2021-08-01T11-01-36',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -643,62 +662,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/26/mysql-xue-xi-bi-ji-3/">
+                <a href="/2021/08/01/mysql-xue-xi-bi-ji-6/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="MySQL学习笔记3">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="MySQL学习笔记6">
                         
-                        <span class="card-title">MySQL学习笔记3</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-26
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Gao Jian
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/notes/">
-                        <span class="chip bg-color">notes</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/25/mysql-ru-he-zai-zhong-duan-cao-zuo-1/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="“MySQL如何在终端操作1”">
-                        
-                        <span class="card-title">“MySQL如何在终端操作1”</span>
+                        <span class="card-title">MySQL学习笔记6</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -709,7 +684,45 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-25
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Gao Jian
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/08/01/mysql-xue-xi-bi-ji-5/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="MySQL学习笔记5">
+                        
+                        <span class="card-title">MySQL学习笔记5</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
                             </span>
                         <span class="publish-author">
                             
