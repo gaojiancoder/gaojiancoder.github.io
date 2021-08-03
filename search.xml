@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>web工程tomcat部署</title>
+      <link href="/2021/08/03/web-gong-cheng-tomcat-bu-shu/"/>
+      <url>/2021/08/03/web-gong-cheng-tomcat-bu-shu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="tomcat部署"><a href="#tomcat部署" class="headerlink" title="tomcat部署"></a>tomcat部署</h1><h2 id="1-进入Tomcat官网根据电脑版本号下载tomcat"><a href="#1-进入Tomcat官网根据电脑版本号下载tomcat" class="headerlink" title="1.进入Tomcat官网根据电脑版本号下载tomcat"></a>1.进入Tomcat官网根据电脑版本号下载tomcat</h2><p><a href="https://tomcat.apache.org/download-80.cgi">https://tomcat.apache.org/download-80.cgi</a></p><p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-1.png" alt="image-1"></p><p>下载好后终端到一个自己指定的文件夹将其移动到其中</p><p>$ mv ~/Downloads/apache-tomcat-8.5.69.tar.gz .   </p><p>在终端中进行解压</p><p>$ tar zxvf apache-tomcat-8.5.69.tar.gz</p><p>解压完拿到文件路径后面IDE中会用到</p><p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-2.png" alt="image-2"></p><h2 id="2-在IDE中创建web模板"><a href="#2-在IDE中创建web模板" class="headerlink" title="2.在IDE中创建web模板"></a>2.在IDE中创建web模板</h2><p>IDE中new 一个project</p><p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-3.png" alt="image-3"></p><p>进入之后选中maven 勾选和选项</p><p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-4.png" alt="image-4"></p><p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-5.png" alt="image-5"></p><p>选完后创建标题 之后一路下一步</p><h2 id="3运行Tomcat"><a href="#3运行Tomcat" class="headerlink" title="3运行Tomcat"></a>3运行Tomcat</h2><p>1首先进行打包不打包无法运行 mvn clean install </p><p>2进行配置，点击Edit<img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-6.png" alt="image-6"></p><p>点击+号 输入tom搜索 选择本地的Local</p><p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-7.png" alt="image-7"></p><p>选择完local 点击FIX 出现两个选项选择第二个</p><p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-9.png" alt="image-9"></p><p>之后点击OK，即可运行</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MySQL学习笔记6</title>
       <link href="/2021/08/01/mysql-xue-xi-bi-ji-6/"/>
       <url>/2021/08/01/mysql-xue-xi-bi-ji-6/</url>

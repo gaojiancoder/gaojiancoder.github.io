@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL学习笔记5, 一个小白的成功之路">
+    <meta name="keywords" content="web工程tomcat部署, 一个小白的成功之路">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MySQL学习笔记5 | 一个小白的成功之路</title>
+    <title>web工程tomcat部署 | 一个小白的成功之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MySQL学习笔记5</h1>
+                    <h1 class="description center-align post-title">web工程tomcat部署</h1>
                 </div>
             </div>
         </div>
@@ -447,7 +447,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-01
+                    2021-08-03
                 </div>
                 
 
@@ -456,14 +456,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    195
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    1 分
                 </div>
                 
 
@@ -491,57 +491,28 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="MySQL查询练习"><a href="#MySQL查询练习" class="headerlink" title="MySQL查询练习"></a>MySQL查询练习</h1><h3 id="学生表Student"><a href="#学生表Student" class="headerlink" title="学生表Student"></a>学生表Student</h3><p>——学号，姓名，性别，出生年月日，所在班级。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table student(
-  sno varchar(20) primary key,
-  sname varchar(20) not null,
-  ssex varchar(10) not null,
-  sbirthday datetime,
-  class varchar(20)
-  );<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="——课程表Course"><a href="#——课程表Course" class="headerlink" title="——课程表Course"></a>——课程表Course</h3><p>——课程号，课程名称，教师编号</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table course(
-  cno varchar(20) primary key,
-  sname varchar(20) not null,
-  tno varchar(20) not null,
-  foreign key(tno) references teacher(tno)
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="——成绩表-Score"><a href="#——成绩表-Score" class="headerlink" title="——成绩表 Score"></a>——成绩表 Score</h3><p>——学号，课程号，成绩</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table score(
-  sno varchar(20) not null,
-  cno varchar(20) not null,
-  degree decimal,
-  foreign key(sno) references student(sno),
-     foreign key(cno) references course(cno),
-  primary key(sno,cno)
-  );<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="——教师表-Teacher"><a href="#——教师表-Teacher" class="headerlink" title="——教师表 Teacher"></a>——教师表 Teacher</h3><p>——教师编号，教师姓名，教师性别，出生年月日，职称，所在部门。</p>
-<pre class="line-numbers language-mysql" data-language="mysql"><code class="language-mysql">create table teacher(
-  tno varchar(20) primary key,
-  tname varchar(20) not null,
-  tsex varchar(10) not null,
-  tbirthday datetime,
-  prof varchar(20) not null,
-  depart varchar(20) not null
-  );<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="——往表中添加数据"><a href="#——往表中添加数据" class="headerlink" title="——往表中添加数据"></a>——往表中添加数据</h3><p>—添加学生信息<br>—添加教师信息<br>—添加课程表<br>—添加成绩表</p>
-<h2 id="查询练习"><a href="#查询练习" class="headerlink" title="查询练习"></a>查询练习</h2><h3 id="——查询student表的所有记录。-代表所有"><a href="#——查询student表的所有记录。-代表所有" class="headerlink" title="——查询student表的所有记录。*代表所有"></a>——查询student表的所有记录。*代表所有</h3><p>mysql&gt; select *from student;<br>+—–+————–+——+———————+——-+<br>| sno | sname        | ssex | sbirthday           | class |<br>+—–+————–+——+———————+——-+<br>| 101 | 撒旦法达     | 男   | 1977-04-23 00:00:00 | 95037 |<br>| 102 | 阿斯蒂芬     | 女   | 1977-04-23 00:00:00 | 95033 |<br>| 103 | 发电房芬     | 女   | 1977-04-23 00:00:00 | 95035 |<br>| 104 | 曾阿凡达     | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 105 | 四方达狗     | 男   | 1977-04-23 00:00:00 | 95032 |<br>| 106 | 曾华         | 女   | 1977-04-23 00:00:00 | 95031 |<br>| 107 | 阿法狗       | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 108 | 沙发         | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 109 | 曾曾华       | 女   | 1977-04-23 00:00:00 | 95033 |<br>+—–+————–+——+———————+——-+<br>9 rows in set (0.00 sec)</p>
-<h3 id="——查询student表中的所有记录的sname，ssex，class列-select"><a href="#——查询student表中的所有记录的sname，ssex，class列-select" class="headerlink" title="——查询student表中的所有记录的sname，ssex，class列     select"></a>——查询student表中的所有记录的sname，ssex，class列     select</h3><p>mysql&gt; select sname,ssex,class from student;<br>+————–+——+——-+<br>| sname        | ssex | class |<br>+————–+——+——-+<br>| 撒旦法达     | 男   | 95037 |<br>| 阿斯蒂芬     | 女   | 95033 |<br>| 发电房芬     | 女   | 95035 |<br>| 曾阿凡达     | 男   | 95033 |<br>| 四方达狗     | 男   | 95032 |<br>| 曾华         | 女   | 95031 |<br>| 阿法狗       | 男   | 95033 |<br>| 沙发         | 男   | 95033 |<br>| 曾曾华       | 女   | 95033 |<br>+————–+——+——-+<br>9 rows in set (0.00 sec)</p>
-<h3 id="——查询教师所有的单位既不重复的depart列-select-distinct-排重"><a href="#——查询教师所有的单位既不重复的depart列-select-distinct-排重" class="headerlink" title="——查询教师所有的单位既不重复的depart列   select distinct 排重"></a>——查询教师所有的单位既不重复的depart列   select distinct 排重</h3><p>mysql&gt; select distinct depart from teacher;<br>+—————–+<br>| depart          |<br>+—————–+<br>| 计算机系        |<br>| 电子工程系      |<br>+—————–+<br>2 rows in set (0.00 sec)</p>
-<h3 id="——查询score表中成绩在60-80之间的所有记录-查询区间-between。。。and"><a href="#——查询score表中成绩在60-80之间的所有记录-查询区间-between。。。and" class="headerlink" title="——查询score表中成绩在60-80之间的所有记录     查询区间 between。。。and"></a>——查询score表中成绩在60-80之间的所有记录     查询区间 between。。。and</h3><p>mysql&gt; select*from score where degree between 60 and 80;<br>+—–+——-+——–+<br>| sno | cno   | degree |<br>+—–+——-+——–+<br>| 102 | 2-801 |     77 |<br>| 105 | 2-801 |     67 |<br>+—–+——-+——–+<br>2 rows in set (0.00 sec)</p>
-<h3 id="——查询score表中成绩为98，87的记录-in"><a href="#——查询score表中成绩为98，87的记录-in" class="headerlink" title="——查询score表中成绩为98，87的记录      in"></a>——查询score表中成绩为98，87的记录      in</h3><p>select *from score where degree in (98,87);<br>mysql&gt; select *from score where degree in (98,87);<br>+—–+——-+——–+<br>| sno | cno   | degree |<br>+—–+——-+——–+<br>| 103 | 3-802 |     87 |<br>| 104 | 2-802 |     87 |<br>| 106 | 3-801 |     98 |<br>| 108 | 3-802 |     87 |<br>+—–+——-+——–+<br>4 rows in set (0.00 sec)</p>
-<h3 id="——查询student表中95031班的性别为女的同学记录-or"><a href="#——查询student表中95031班的性别为女的同学记录-or" class="headerlink" title="——查询student表中95031班的性别为女的同学记录   or"></a>——查询student表中95031班的性别为女的同学记录   or</h3><p>mysql&gt; select *from student where class=’95033’ or ssex = ‘女’;<br>+—–+————–+——+———————+——-+<br>| sno | sname        | ssex | sbirthday           | class |<br>+—–+————–+——+———————+——-+<br>| 102 | 阿斯蒂芬     | 女   | 1977-04-23 00:00:00 | 95033 |<br>| 103 | 发电房芬     | 女   | 1977-04-23 00:00:00 | 95035 |<br>| 104 | 曾阿凡达     | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 106 | 曾华         | 女   | 1977-04-23 00:00:00 | 95031 |<br>| 107 | 阿法狗       | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 108 | 沙发         | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 109 | 曾曾华       | 女   | 1977-04-23 00:00:00 | 95033 |<br>+—–+————–+——+———————+——-+<br>7 rows in set (0.00 sec)</p>
-<h3 id="——以class降序查询student表的所有记录-order-by-…desc"><a href="#——以class降序查询student表的所有记录-order-by-…desc" class="headerlink" title="——以class降序查询student表的所有记录  order by …desc"></a>——以class降序查询student表的所有记录  order by …desc</h3><p>mysql&gt; select *from student order by class desc;<br>+—–+————–+——+———————+——-+<br>| sno | sname        | ssex | sbirthday           | class |<br>+—–+————–+——+———————+——-+<br>| 101 | 撒旦法达     | 男   | 1977-04-23 00:00:00 | 95037 |<br>| 103 | 发电房芬     | 女   | 1977-04-23 00:00:00 | 95035 |<br>| 102 | 阿斯蒂芬     | 女   | 1977-04-23 00:00:00 | 95033 |<br>| 104 | 曾阿凡达     | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 107 | 阿法狗       | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 108 | 沙发         | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 109 | 曾曾华       | 女   | 1977-04-23 00:00:00 | 95033 |<br>| 105 | 四方达狗     | 男   | 1977-04-23 00:00:00 | 95032 |<br>| 106 | 曾华         | 女   | 1977-04-23 00:00:00 | 95031 |<br>+—–+————–+——+———————+——-+<br>9 rows in set (0.00 sec)</p>
-<h3 id="——查询以cno升序，degree降序查询score表的所有记录"><a href="#——查询以cno升序，degree降序查询score表的所有记录" class="headerlink" title="——查询以cno升序，degree降序查询score表的所有记录"></a>——查询以cno升序，degree降序查询score表的所有记录</h3><p>mysql&gt; select *from score order by cno asc,degree desc;<br>+—–+——-+——–+<br>| sno | cno   | degree |<br>+—–+——-+——–+<br>| 102 | 2-801 |     77 |<br>| 105 | 2-801 |     67 |<br>| 104 | 2-802 |     87 |<br>| 106 | 3-801 |     98 |<br>| 101 | 3-801 |     89 |<br>| 103 | 3-802 |     87 |<br>| 108 | 3-802 |     87 |<br>+—–+——-+——–+<br>7 rows in set (0.00 sec)</p>
-<h3 id="——查询95033班的学生人数-count-统计"><a href="#——查询95033班的学生人数-count-统计" class="headerlink" title="——查询95033班的学生人数   count (统计)"></a>——查询95033班的学生人数   count (统计)</h3><p>mysql&gt; select count(<em>) from student where class = ‘95031’;<br>+———-+<br>| count(</em>) |<br>+———-+<br>|        1 |<br>+———-+<br>1 row in set (0.00 sec)</p>
-<h3 id="——查询score表中的最高分的学生的学号和课程号（子查询或者排序）"><a href="#——查询score表中的最高分的学生的学号和课程号（子查询或者排序）" class="headerlink" title="——查询score表中的最高分的学生的学号和课程号（子查询或者排序）"></a>——查询score表中的最高分的学生的学号和课程号（子查询或者排序）</h3><p>mysql&gt; select sno,cno from score where degree =(select max(degree) from score);<br>+—–+——-+<br>| sno | cno   |<br>+—–+——-+<br>| 106 | 3-801 |<br>+—–+——-+<br>1 row in set (0.01 sec)</p>
-<h3 id="——查询每门课的平均成绩-——avg-平均-group-by-分组"><a href="#——查询每门课的平均成绩-——avg-平均-group-by-分组" class="headerlink" title="——查询每门课的平均成绩  ——avg()平均  group by 分组"></a>——查询每门课的平均成绩  ——avg()平均  group by 分组</h3><p>mysql&gt; Select  cno,avg(degree) from score group by cno;<br>+——-+————-+<br>| cno   | avg(degree) |<br>+——-+————-+<br>| 2-801 |     72.0000 |<br>| 2-802 |     87.0000 |<br>| 3-801 |     93.5000 |<br>| 3-802 |     87.0000 |<br>+——-+————-+<br>4 rows in set (0.00 sec)</p>
-<h3 id="——查询所有学生的sno，sname和degree列"><a href="#——查询所有学生的sno，sname和degree列" class="headerlink" title="——查询所有学生的sno，sname和degree列"></a>——查询所有学生的sno，sname和degree列</h3><p>mysql&gt; select sno,sname,degree from course,score where course.cno = score.cno;<br>+—–+—————–+——–+<br>| sno | sname           | degree |<br>+—–+—————–+——–+<br>| 102 | 数字电路        |     77 |<br>| 105 | 数字电路        |     67 |<br>| 104 | 高等数学        |     87 |<br>| 101 | 操作系统        |     89 |<br>| 106 | 操作系统        |     98 |<br>| 103 | 计算机导论      |     87 |<br>| 108 | 计算机导论      |     87 |<br>+—–+—————–+——–+<br>7 rows in set (0.01 sec)</p>
-<h3 id="——查询“95033”班级学生每门课的平均分"><a href="#——查询“95033”班级学生每门课的平均分" class="headerlink" title="——查询“95033”班级学生每门课的平均分"></a>——查询“95033”班级学生每门课的平均分</h3><p>1.先把班级学生拿出来<br>2.在把1当条件到分数表里筛选<br>3.再以cno字段进行分组查询平均成绩<br>mysql&gt; select cno,avg(degree) from score where sno in (select sno from student where class = ‘95033’) group by cno;<br>+——-+————-+<br>| cno   | avg(degree) |<br>+——-+————-+<br>| 2-801 |     77.0000 |<br>| 2-802 |     87.0000 |<br>| 3-802 |     87.0000 |<br>+——-+————-+<br>3 rows in set (0.00 sec);</p>
-<h3 id="——查询和学号为105，108的同学同年出生的所有学生的sno，sname，sbirthday。"><a href="#——查询和学号为105，108的同学同年出生的所有学生的sno，sname，sbirthday。" class="headerlink" title="——查询和学号为105，108的同学同年出生的所有学生的sno，sname，sbirthday。"></a>——查询和学号为105，108的同学同年出生的所有学生的sno，sname，sbirthday。</h3><p>mysql&gt; select *from student where year(sbirthday) in (select year(sbirthday)from student where sno in(105,108));<br>+—–+————–+——+———————+——-+<br>| sno | sname        | ssex | sbirthday           | class |<br>+—–+————–+——+———————+——-+<br>| 101 | 撒旦法达     | 男   | 1977-04-23 00:00:00 | 95037 |<br>| 102 | 阿斯蒂芬     | 女   | 1977-04-23 00:00:00 | 95033 |<br>| 103 | 发电房芬     | 女   | 1977-04-23 00:00:00 | 95035 |<br>| 104 | 曾阿凡达     | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 105 | 四方达狗     | 男   | 1977-04-23 00:00:00 | 95032 |<br>| 106 | 曾华         | 女   | 1977-04-23 00:00:00 | 95031 |<br>| 107 | 阿法狗       | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 108 | 沙发         | 男   | 1977-04-23 00:00:00 | 95033 |<br>| 109 | 曾曾华       | 女   | 1977-04-23 00:00:00 | 95033 |<br>+—–+————–+——+———————+——-+<br>9 rows in set (0.00 sec)</p>
-<h3 id="——查询四狗老师教课的学生的成绩"><a href="#——查询四狗老师教课的学生的成绩" class="headerlink" title="——查询四狗老师教课的学生的成绩"></a>——查询四狗老师教课的学生的成绩</h3><p>mysql&gt; select *from score where cno=(select cno from course where tno = (select tno from teacher where tname = ‘四狗’));<br>+—–+——-+——–+<br>| sno | cno   | degree |<br>+—–+——-+——–+<br>| 102 | 2-801 |     77 |<br>| 105 | 2-801 |     67 |<br>+—–+——-+——–+<br>2 rows in set (0.00 sec)</p>
-<h3 id="——查询计算机系与电子工程系不同职称的教师的tname和prof"><a href="#——查询计算机系与电子工程系不同职称的教师的tname和prof" class="headerlink" title="——查询计算机系与电子工程系不同职称的教师的tname和prof"></a>——查询计算机系与电子工程系不同职称的教师的tname和prof</h3><p>————union 求并集  合并到一起<br>select prof from teacher where depart =’电子工程系’；<br>select *from teacher where depart = ‘计算机系’ and prof not in (select  prof from teacher where depart =’电子工程系’)<br>union<br>select *from teacher where depart = ‘电子工程系’ and prof not in (select  prof from teacher where depart =’计算机系’);<br>+—-+————–+——+———————+———–+—————–+<br>| tno | tname        | tsex | tbirthday           | prof      | depart          |<br>+—–+————–+——+———————+———–+—————–+<br>| 801 | 法达         | 男   | 1977-04-30 00:00:00 | 讲师      | 计算机系        |<br>| 803 | 房芬         | 女   | 1977-04-13 00:00:00 | 教授      | 计算机系        |<br>| 805 | 四狗         | 男   | 1977-04-27 00:00:00 | 副教授    | 电子工程系      |<br>| 806 | 曾沙发华     | 女   | 1977-05-23 00:00:00 | 助教      | 电子工程系      |<br>+—–+————–+——+———————+———–+—————–+<br>4 rows in set (0.01 sec）</p>
-<h3 id="——any任意（至少）-all且（所有）-as-别名（重命名打印）-union合并-having-count-gt-1-数量大于1-year-now-现在的年份-order-by-顺序查询"><a href="#——any任意（至少）-all且（所有）-as-别名（重命名打印）-union合并-having-count-gt-1-数量大于1-year-now-现在的年份-order-by-顺序查询" class="headerlink" title="——any任意（至少） all且（所有） as 别名（重命名打印） union合并 having count(*)&gt;1 数量大于1   year(now())现在的年份   order by 顺序查询"></a>——any任意（至少） all且（所有） as 别名（重命名打印） union合并 having count(*)&gt;1 数量大于1   year(now())现在的年份   order by 顺序查询</h3>
+                <h1 id="tomcat部署"><a href="#tomcat部署" class="headerlink" title="tomcat部署"></a>tomcat部署</h1><h2 id="1-进入Tomcat官网根据电脑版本号下载tomcat"><a href="#1-进入Tomcat官网根据电脑版本号下载tomcat" class="headerlink" title="1.进入Tomcat官网根据电脑版本号下载tomcat"></a>1.进入Tomcat官网根据电脑版本号下载tomcat</h2><p><a target="_blank" rel="noopener" href="https://tomcat.apache.org/download-80.cgi">https://tomcat.apache.org/download-80.cgi</a></p>
+<p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-1.png" alt="image-1"></p>
+<p>下载好后终端到一个自己指定的文件夹将其移动到其中</p>
+<p>$ mv ~/Downloads/apache-tomcat-8.5.69.tar.gz .   </p>
+<p>在终端中进行解压</p>
+<p>$ tar zxvf apache-tomcat-8.5.69.tar.gz</p>
+<p>解压完拿到文件路径后面IDE中会用到</p>
+<p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-2.png" alt="image-2"></p>
+<h2 id="2-在IDE中创建web模板"><a href="#2-在IDE中创建web模板" class="headerlink" title="2.在IDE中创建web模板"></a>2.在IDE中创建web模板</h2><p>IDE中new 一个project</p>
+<p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-3.png" alt="image-3"></p>
+<p>进入之后选中maven 勾选和选项</p>
+<p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-4.png" alt="image-4"></p>
+<p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-5.png" alt="image-5"></p>
+<p>选完后创建标题 之后一路下一步</p>
+<h2 id="3运行Tomcat"><a href="#3运行Tomcat" class="headerlink" title="3运行Tomcat"></a>3运行Tomcat</h2><p>1首先进行打包不打包无法运行 mvn clean install </p>
+<p>2进行配置，点击Edit<img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-6.png" alt="image-6"></p>
+<p>点击+号 输入tom搜索 选择本地的Local</p>
+<p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-7.png" alt="image-7"></p>
+<p>选择完local 点击FIX 出现两个选项选择第二个</p>
+<p><img src="/2021/08/03/web-gong-cheng-tomcat-bu-shu/image-9.png" alt="image-9"></p>
+<p>之后点击OK，即可运行</p>
+
                 
             </div>
             <hr/>
@@ -567,7 +538,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/08/01/mysql-xue-xi-bi-ji-5/">http://example.com/2021/08/01/mysql-xue-xi-bi-ji-5/</a>
+                    <a href="http://example.com/2021/08/03/web-gong-cheng-tomcat-bu-shu/">http://example.com/2021/08/03/web-gong-cheng-tomcat-bu-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -651,7 +622,7 @@
         repo: 'gaojiancoder.github.io',
         owner: 'gaojiancoder',
         admin: "gaojiancoder",
-        id: '2021-08-01T10-13-40',
+        id: '2021-08-03T23-53-17',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -679,9 +650,56 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/08/03/web-gong-cheng-tomcat-bu-shu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="web工程tomcat部署">
+                        
+                        <span class="card-title">web工程tomcat部署</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Gao Jian
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/notes/">
+                        <span class="chip bg-color">notes</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/08/01/mysql-xue-xi-bi-ji-6/">
                     <div class="card-image">
@@ -699,45 +717,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Gao Jian
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/07/29/maven-chuang-jian-yu-shi-yong/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="maven创建与使用">
-                        
-                        <span class="card-title">maven创建与使用</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-01
                             </span>
                         <span class="publish-author">
                             
@@ -746,14 +727,6 @@
                             
                         </span>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/notes/">
-                        <span class="chip bg-color">notes</span>
-                    </a>
-                    
                 </div>
                 
             </div>
