@@ -17,7 +17,7 @@ categories:
 
 https://tomcat.apache.org/download-80.cgi
 
-![image-1](image-1.png)
+
 
 下载好后终端到一个自己指定的文件夹将其移动到其中
 
@@ -45,7 +45,7 @@ IDE中new 一个project
 
 选完后创建标题 之后一路下一步
 
-## 3运行Tomcat
+### 3运行Tomcat
 
 1首先进行打包不打包无法运行 mvn clean install 
 
@@ -58,5 +58,3 @@ IDE中new 一个project
 选择完local 点击FIX 出现两个选项选择第二个
 
 ![image-9](image-9.png)
-
-之后点击OK，即可运行
