@@ -32,6 +32,14 @@ make
 
 进入~/.zshrc中将根目录复制到最后。环境变量配置完成
 
+百度进入mvnrepository搜索jedis下载redis依赖jar包
+
+加入新建工程pom.xml中
+
+![](3.png)
+
+
+
 
 
 Lsof -i:端口号  ===查看端口运行程序
