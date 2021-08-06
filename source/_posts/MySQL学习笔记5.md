@@ -8,7 +8,7 @@ date: 2021-08-01 10:13:40
 password:
 summary:
 tags: notes
-categories:
+categories: MySQL
 ---
 # MySQL查询练习
 ### 学生表Student
@@ -262,4 +262,5 @@ select *from teacher where depart = '电子工程系' and prof not in (select  p
 | 806 | 曾沙发华     | 女   | 1977-05-23 00:00:00 | 助教      | 电子工程系      |
 +-----+--------------+------+---------------------+-----------+-----------------+
 4 rows in set (0.01 sec）
+
 ### ——any任意（至少） all且（所有） as 别名（重命名打印） union合并 having count(*)>1 数量大于1   year(now())现在的年份   order by 顺序查询

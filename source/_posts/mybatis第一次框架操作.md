@@ -8,7 +8,7 @@ date: 2021-08-04 12:18:05
 password:
 summary:
 tags: notes
-categories:
+categories: mybatis
 ---
 
 # mybatis

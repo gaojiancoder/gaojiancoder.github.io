@@ -8,7 +8,7 @@ date: 2021-07-27 10:14:30
 password:
 summary:
 tags: notes
-categories:
+categories: MySQL
 ---
 # 数据库的三大范式
 

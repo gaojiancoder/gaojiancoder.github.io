@@ -8,7 +8,7 @@ date: 2021-08-03 23:53:17
 password:
 summary:
 tags: notes
-categories:
+categories: Tomcat
 ---
 
 # tomcat部署

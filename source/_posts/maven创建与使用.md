@@ -8,7 +8,7 @@ date: 2021-07-29 10:21:26
 password:
 summary:
 tags: notes
-categories:
+categories: maven
 ---
 ## 1下载maven
 输入以下网址进入maven官网 

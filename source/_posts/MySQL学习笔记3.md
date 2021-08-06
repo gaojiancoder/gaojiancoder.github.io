@@ -8,7 +8,7 @@ date: 2021-07-26 23:21:33
 password:
 summary:
 tags: notes
-categories:
+categories: MySQL
 ---
 # MySQL建表约束.sql
 

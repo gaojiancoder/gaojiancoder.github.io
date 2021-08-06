@@ -7,8 +7,8 @@ mathjax: true
 date: 2021-08-01 11:01:36
 password:
 summary:
-tags:
-categories:
+tags: notes
+categories: MySQL
 ---
 # ——SQL的四种连接查询
 ### 内连接
