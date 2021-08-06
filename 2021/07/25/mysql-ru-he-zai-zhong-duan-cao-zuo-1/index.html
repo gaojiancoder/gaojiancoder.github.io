@@ -440,6 +440,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/MySQL/" class="post-category">
+                                MySQL
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -456,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    495
+                    493
                 </div>
                 
 
@@ -491,32 +500,23 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>mysql关系型数据库<br>如何使用终端操作数据库?<br>1.如何登陆数据库。<br>首先进入终端，p后面为登陆MySQL的密码 首次进入会提示设置，如果没有则不需用输入。<br>gaojian at gaojian in ~<br>$ mysql -uroot -p12345678</p>
-<p>2.如何查询数据库服务器中所有的数据库？ show databases;</p>
-<p>mysql&gt; show databases;<br>+——————–+<br>| Database           |<br>+——————–+<br>| demo               |<br>| information_schema |<br>| mysql              |<br>| performance_schema |<br>| sys                |<br>+——————–+<br>5 rows in set (0.00 sec)</p>
-<p>3.如何选中某一个数据库进行操作</p>
-<p>————如果没有选中数据库直接进行操作</p>
+                <h1 id="mysql关系型数据库"><a href="#mysql关系型数据库" class="headerlink" title="mysql关系型数据库"></a>mysql关系型数据库</h1><h2 id="如何使用终端操作数据库"><a href="#如何使用终端操作数据库" class="headerlink" title="如何使用终端操作数据库?"></a>如何使用终端操作数据库?</h2><h3 id="1-如何登陆数据库"><a href="#1-如何登陆数据库" class="headerlink" title="1.如何登陆数据库"></a>1.如何登陆数据库</h3><p>首先进入终端，p后面为登陆MySQL的密码 首次进入会提示设置，如果没有则不需用输入。<br>gaojian at gaojian in ~<br>$ mysql -uroot -p12345678</p>
+<h3 id="2-如何查询数据库服务器中所有的数据库？-show-databases"><a href="#2-如何查询数据库服务器中所有的数据库？-show-databases" class="headerlink" title="2.如何查询数据库服务器中所有的数据库？ show databases;"></a>2.如何查询数据库服务器中所有的数据库？ show databases;</h3><p>mysql&gt; show databases;<br>+——————–+<br>| Database           |<br>+——————–+<br>| demo               |<br>| information_schema |<br>| mysql              |<br>| performance_schema |<br>| sys                |<br>+——————–+<br>5 rows in set (0.00 sec)</p>
+<h3 id="3-如何选中某一个数据库进行操作"><a href="#3-如何选中某一个数据库进行操作" class="headerlink" title="3.如何选中某一个数据库进行操作"></a>3.如何选中某一个数据库进行操作</h3><p>如果没有选中数据库直接进行操作</p>
 <p>mysql&gt; select*from admin；<br>ERROR 1046 (3D000): No database selected<br>会报错</p>
-<p>————SQL语句 use demo<br>mysql&gt; use demo<br>Reading table information for completion of table and column names<br>You can turn off this feature to get a quicker startup with -A</p>
+<p>SQL语句 use demo<br>mysql&gt; use demo<br>Reading table information for completion of table and column names<br>You can turn off this feature to get a quicker startup with -A</p>
 <p>Database changed<br>mysql&gt; select*from admin；<br>Empty set (0.00 sec)<br>使用use进入指定数据库</p>
-<p>————如何退出数据库服务器 exit;<br>mysql&gt; exit;<br>Bye<br>————如何在数据库服务器中创建我们的数据库？ Create database <name>;</p>
-<p>Create database <name>;</p>
+<h3 id="如何退出数据库服务器-exit"><a href="#如何退出数据库服务器-exit" class="headerlink" title="如何退出数据库服务器 exit;"></a>如何退出数据库服务器 exit;</h3><p>mysql&gt; exit;<br>Bye</p>
+<h3 id="如何在数据库服务器中创建我们的数据库？-Create-database"><a href="#如何在数据库服务器中创建我们的数据库？-Create-database" class="headerlink" title="如何在数据库服务器中创建我们的数据库？ Create database ;"></a>如何在数据库服务器中创建我们的数据库？ Create database <name>;</h3><p>Create database <name>;</p>
 <p>mysql&gt; create database test;<br>Query OK, 1 row affected (0.00 sec)</p>
-<p>————如何查看某个数据库中所有的数据表   show tables;</p>
-<p>mysql&gt; show tables;<br>+—————-+<br>| Tables_in_test |<br>+—————-+<br>| pet            |<br>+—————-+<br>1 row in set (0.00 sec)</p>
-<p>————如何创建一个数据表 create table pet</p>
-<p>mysql&gt; create table pet(<br>    -&gt; name varchar(20),<br>    -&gt; owner varchar(20),<br>    -&gt; sex char(1),<br>    -&gt; birth date,<br>    -&gt; death date);<br>Query OK, 0 rows affected (0.01 sec)</p>
-<p>————查看创建好的数据表的结构 describe pet;</p>
-<p>mysql&gt; describe pet;<br>+——-+————-+——+—–+———+——-+<br>| Field    | Type     | Null | Key    | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| name  | varchar(20) | YES  |        | NULL    |       |<br>| owner | varchar(20) | YES  |        | NULL    |       |<br>| sex   | char(1)     | YES  |        | NULL    |       |<br>| birth | date        | YES  |        | NULL    |       |<br>| death | date        | YES  |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>5 rows in set (0.00 sec)</p>
-<p>————查看数据表中的记录 select*from pet;</p>
-<p>mysql&gt; select*from pet;<br>Empty set (0.01 sec)</p>
-<p>————如何往数据表中添加数据记录 insert into pet</p>
-<p>mysql&gt; insert into pet<br>    -&gt; values(‘bob’,’gao’,’n’,’1999-3-2’,null);<br>Query OK, 1 row affected (0.00 sec)</p>
+<h3 id="如何查看某个数据库中所有的数据表-show-tables"><a href="#如何查看某个数据库中所有的数据表-show-tables" class="headerlink" title="如何查看某个数据库中所有的数据表   show tables;"></a>如何查看某个数据库中所有的数据表   show tables;</h3><p>mysql&gt; show tables;<br>+—————-+<br>| Tables_in_test |<br>+—————-+<br>| pet            |<br>+—————-+<br>1 row in set (0.00 sec)</p>
+<h3 id="如何创建一个数据表-create-table-pet"><a href="#如何创建一个数据表-create-table-pet" class="headerlink" title="如何创建一个数据表 create table pet"></a>如何创建一个数据表 create table pet</h3><p>mysql&gt; create table pet(<br>    -&gt; name varchar(20),<br>    -&gt; owner varchar(20),<br>    -&gt; sex char(1),<br>    -&gt; birth date,<br>    -&gt; death date);<br>Query OK, 0 rows affected (0.01 sec)</p>
+<h3 id="查看创建好的数据表的结构-describe-pet"><a href="#查看创建好的数据表的结构-describe-pet" class="headerlink" title="查看创建好的数据表的结构 describe pet;"></a>查看创建好的数据表的结构 describe pet;</h3><p>mysql&gt; describe pet;<br>+——-+————-+——+—–+———+——-+<br>| Field    | Type     | Null | Key    | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| name  | varchar(20) | YES  |        | NULL    |       |<br>| owner | varchar(20) | YES  |        | NULL    |       |<br>| sex   | char(1)     | YES  |        | NULL    |       |<br>| birth | date        | YES  |        | NULL    |       |<br>| death | date        | YES  |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>5 rows in set (0.00 sec)</p>
+<h3 id="查看数据表中的记录-select-from-pet"><a href="#查看数据表中的记录-select-from-pet" class="headerlink" title="查看数据表中的记录 select*from pet;"></a>查看数据表中的记录 select*from pet;</h3><p>mysql&gt; select*from pet;<br>Empty set (0.01 sec)</p>
+<h3 id="如何往数据表中添加数据记录-insert-into-pet"><a href="#如何往数据表中添加数据记录-insert-into-pet" class="headerlink" title="如何往数据表中添加数据记录 insert into pet"></a>如何往数据表中添加数据记录 insert into pet</h3><p>mysql&gt; insert into pet<br>    -&gt; values(‘bob’,’gao’,’n’,’1999-3-2’,null);<br>Query OK, 1 row affected (0.00 sec)</p>
 <p>values输入的值要与表中的位置相对应</p>
-<p>————再一次查询</p>
-<p>mysql&gt; select *from pet;<br>+——+——-+——+————+——-+<br>| name | owner | sex  | birth            | death |<br>+——+——-+——+————+——-+<br>| bob  | gao   | n      | 1999-03-02 | NULL  |<br>+——+——-+——+————+——-+<br>1 row in set (0.00 sec)</p>
-<p>——————插入新数据和添加数据一样的操作</p>
-
+<h4 id="再一次查询"><a href="#再一次查询" class="headerlink" title="再一次查询"></a>再一次查询</h4><p>mysql&gt; select *from pet;<br>+——+——-+——+————+——-+<br>| name | owner | sex  | birth            | death |<br>+——+——-+——+————+——-+<br>| bob  | gao   | n      | 1999-03-02 | NULL  |<br>+——+——-+——+————+——-+<br>1 row in set (0.00 sec)</p>
+<h4 id="插入新数据和添加数据一样的操作"><a href="#插入新数据和添加数据一样的操作" class="headerlink" title="插入新数据和添加数据一样的操作"></a>插入新数据和添加数据一样的操作</h4>
                 
             </div>
             <hr/>
@@ -679,8 +679,12 @@
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Gao Jian
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
+                                </a>
+                            
                             
                         </span>
                     </div>
@@ -724,8 +728,12 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Gao Jian
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
+                                </a>
+                            
                             
                         </span>
                     </div>
