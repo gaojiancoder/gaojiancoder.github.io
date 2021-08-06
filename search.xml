@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>redis下载与安装</title>
+      <link href="/2021/08/06/redis-xia-zai-yu-an-zhuang/"/>
+      <url>/2021/08/06/redis-xia-zai-yu-an-zhuang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Redis安装使用流程"><a href="#Redis安装使用流程" class="headerlink" title="Redis安装使用流程"></a>Redis安装使用流程</h1><p>百度搜索install redis</p><p><img src="/2021/08/06/redis-xia-zai-yu-an-zhuang/1.png"></p><p>在终端新建文件夹执行以下命令</p><pre class="line-numbers language-java" data-language="java"><code class="language-java">wget http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>download<span class="token punctuation">.</span>redis<span class="token punctuation">.</span>io<span class="token operator">/</span>redis<span class="token operator">-</span>stable<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gztar xvzf redis<span class="token operator">-</span>stable<span class="token punctuation">.</span>tar<span class="token punctuation">.</span>gzcd redis<span class="token operator">-</span>stablemake<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p>然后cd 到bin的前一个目录复制路径配置环境变量</p><p><img src="/2021/08/06/redis-xia-zai-yu-an-zhuang/2.png"></p><p>进入~/.zshrc中将根目录复制到最后。环境变量配置完成</p><p>Lsof -i:端口号  ===查看端口运行程序</p><p>ifconfig    查看本机IP地址在en0下</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> redis </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Tomcat细小问题解决</title>
       <link href="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/"/>
       <url>/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/</url>
       
-        <content type="html"><![CDATA[<p>一.解决网址路径修改问题</p><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/1.png"></p><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/2.png"></p><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/3.png"></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="一-解决网址路径修改问题"><a href="#一-解决网址路径修改问题" class="headerlink" title="一.解决网址路径修改问题"></a>一.解决网址路径修改问题</h2><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/1.png"></p><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/2.png"></p><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/3.png"></p><h2 id="二-运行时无法得到网址问题"><a href="#二-运行时无法得到网址问题" class="headerlink" title="二.运行时无法得到网址问题"></a>二.运行时无法得到网址问题</h2><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/%E5%B0%8F%E9%97%AE%E9%A2%98.png"></p><p>如果这两个不一致会导致无法响应</p>]]></content>
       
       
       <categories>
