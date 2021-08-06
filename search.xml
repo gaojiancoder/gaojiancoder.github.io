@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Tomcat细小问题解决</title>
+      <link href="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/"/>
+      <url>/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/</url>
+      
+        <content type="html"><![CDATA[<p>一.解决网址路径修改问题</p><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/1.png"></p><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/2.png"></p><p><img src="/2021/08/05/tomcat-xi-xiao-wen-ti-jie-jue/3.png"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Tomcat </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mybatis第一次框架操作</title>
       <link href="/2021/08/04/mybatis-di-yi-ci-kuang-jia-cao-zuo/"/>
       <url>/2021/08/04/mybatis-di-yi-ci-kuang-jia-cao-zuo/</url>
