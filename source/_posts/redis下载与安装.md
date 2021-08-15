@@ -40,7 +40,11 @@ make
 
 
 
+配置环境变量： vim ~/.zshrc
 
+配置完运行文件：source ~/.zshrc
+
+查看文件程序在哪里：which redis-server
 
 Lsof -i:端口号  ===查看端口运行程序
 
