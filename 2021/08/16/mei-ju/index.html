@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="MySQL学习笔记4, 一个小白的成功之路">
+    <meta name="keywords" content="枚举, 一个小白的成功之路">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>MySQL学习笔记4 | 一个小白的成功之路</title>
+    <title>枚举 | 一个小白的成功之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">MySQL学习笔记4</h1>
+                    <h1 class="description center-align post-title">枚举</h1>
                 </div>
             </div>
         </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/MySQL/" class="post-category">
-                                MySQL
+                            <a href="/categories/Enum/" class="post-category">
+                                Enum
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-07-27
+                    2021-08-16
                 </div>
                 
 
@@ -465,14 +465,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    499
+                    214
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -500,39 +500,63 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="数据库的三大范式"><a href="#数据库的三大范式" class="headerlink" title="数据库的三大范式"></a>数据库的三大范式</h1><h2 id="第一范式-1NF"><a href="#第一范式-1NF" class="headerlink" title="第一范式 1NF"></a>第一范式 1NF</h2><pre class="line-numbers language-none"><code class="language-none">select*from student2;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>+——+———–+———————————————–+<br>| id   | name       | address                                                |<br>+——+———–+———————————————–+<br>|    2 | 张胜男     | 中国黑龙江省哈尔滨市向阳区50号      |<br>|    3 | 张胜男     | 中国黑龙江省哈尔滨市武侯区90号      |<br>|    1 | 吴刚        | 中国黑龙江省哈尔滨市高新区100号    |<br>+——+———–+———————————————–+<br>3 rows in set (0.00 sec)</p>
-<p>这种还可以拆分的不属于第一范式</p>
-<p>+—-+———–+——–+————–+————–+—————-+<br>| id | name      | cuntry | privence     | city              | details              |<br>+—-+———–+——–+————–+————–+—————-+<br>|  1 | 张三        | 中国   | 黑龙江省     | 哈尔滨市     | 向阳区50号     |<br>|  2 | 旺盛达    | 中国   | 黑龙江省     | 哈尔滨市     | 向阳区50号     |<br>|  3 | 张胜男    | 中国   | 黑龙江省     | 哈尔滨市     | 向阳区40号     |<br>+—-+———–+——–+————–+————–+—————-+<br>3 rows in set (0.00 sec)</p>
-<p>达到不可拆分时为第一范式</p>
-<h2 id="第二范式2NF"><a href="#第二范式2NF" class="headerlink" title="第二范式2NF"></a>第二范式2NF</h2><p>必须满足第一范式前提下，2NF要求除主键外的每一列都必须完全依赖于主键。</p>
-<p>如果出现不完全依赖只可能发生在联合主键的情况下。</p>
-<h3 id="示例——订单表"><a href="#示例——订单表" class="headerlink" title="示例——订单表"></a>示例——订单表</h3><pre class="line-numbers language-none"><code class="language-none">create table myorder(
-product_id int,
-customer_id int,
-product_name varchar(20),
-customer_name varchar(20),
-primary key(product_id,customer_id)
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>mysql&gt; desc myorder;<br>+—————+————-+——+—–+———+——-+<br>| Field                   | Type            | Null  | Key   | Default | Extra |<br>+—————+————-+——+—–+———+——-+<br>| product_id          | int                | NO   | PRI  | NULL    |          |<br>| customer_id       | int                | NO    | PRI  | NULL    |          |<br>| product_name    | varchar(20) | YES   |         | NULL    |           |<br>| customer_name | varchar(20) | YES   |         | NULL    |           |<br>+—————+————-+——+—–+———+——-+<br>4 rows in set (0.00 sec)<br>不满足第二范式，需要进行拆表</p>
-<pre class="line-numbers language-none"><code class="language-none">create table myorder1(
-Order_id int primary key,
-product_id int,
-Customer_id int
- );<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>mysql&gt; desc myorder1;<br>+————-+——+——+—–+———+——-+<br>| Field              | Type | Null | Key | Default | Extra |<br>+————-+——+——+—–+———+——-+<br>| Order_id        | int  | NO    | PRI | NULL    |       |<br>| product_id     | int  | YES  |        | NULL    |       |<br>| Customer_id | int  | YES   |        | NULL    |       |<br>+————-+——+——+—–+———+——-+<br>3 rows in set (0.00 sec</p>
-<pre class="line-numbers language-none"><code class="language-none">create table product(
-id int primary key,
-Name varchar(20)
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>mysql&gt; desc product;<br>+——-+————-+——+—–+———+——-+<br>| Field    | Type            | Null | Key | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| id         | int               | NO   | PRI | NULL    |       |<br>| Name  | varchar(20) | YES  |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>2 rows in set (0.00 sec)</p>
-<pre class="line-numbers language-none"><code class="language-none">create table customer(
-Id int primary key,
-Name varchar(20)
-);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>mysql&gt; desc customer;;<br>+——-+————-+——+—–+———+——-+<br>| Field   | Type            | Null    | Key | Default | Extra |<br>+——-+————-+——+—–+———+——-+<br>| Id        | int               | NO     | PRI | NULL    |       |<br>| Name  | varchar(20) | YES   |        | NULL    |       |<br>+——-+————-+——+—–+———+——-+<br>2 rows in set (0.01 sec)<br>——分成三个表后，满足第二范式的设计</p>
-<h2 id="第三范式3NF"><a href="#第三范式3NF" class="headerlink" title="第三范式3NF"></a>第三范式3NF</h2><p>——必须先满足第二范式，除主键外不能有传递依赖关系。</p>
-<h3 id="什么是传递依赖"><a href="#什么是传递依赖" class="headerlink" title="什么是传递依赖"></a>什么是传递依赖</h3><p>通俗的讲就是 a—&gt;b,b—&gt;c,a可以借着b推出c 这就是传递依赖</p>
+                <h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><h3 id="1书写格式"><a href="#1书写格式" class="headerlink" title="1书写格式"></a>1书写格式</h3><p>变量不可重复，用大写字母定义</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">Season</span> <span class="token punctuation">&#123;</span>
+    SPRING<span class="token punctuation">,</span>SUMMER<span class="token punctuation">,</span>AUTUMN<span class="token punctuation">,</span>WINTER<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2枚举创建"><a href="#2枚举创建" class="headerlink" title="2枚举创建"></a>2枚举创建</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//枚举创建</span>
+    <span class="token class-name">Season</span> season<span class="token operator">=</span><span class="token class-name">Season</span><span class="token punctuation">.</span>SPRING<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3常用方法"><a href="#3常用方法" class="headerlink" title="3常用方法"></a>3常用方法</h3><p>values：方法返回在枚举中按照声明顺序产生的常量值组成的数组</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token class-name">Season</span><span class="token punctuation">[</span><span class="token punctuation">]</span> values <span class="token operator">=</span> <span class="token class-name">Season</span><span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Season</span> season<span class="token operator">:</span>values<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>season<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/**SPRING
+*SUMMER
+*AUTUMN
+*WINTER
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>ordinal：某个枚举常量的索引</p>
+<h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>只能由private修饰</p>
+<p>常量必须在最前面定义</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">enum</span> light <span class="token punctuation">&#123;</span>
+    RED<span class="token punctuation">,</span>YELLOW<span class="token punctuation">,</span>GREEN<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="红绿灯案例"><a href="#红绿灯案例" class="headerlink" title="红绿灯案例"></a>红绿灯案例</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        test1 test1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        test1<span class="token punctuation">.</span><span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">private</span> light light1 <span class="token operator">=</span> light<span class="token punctuation">.</span>RED<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">change</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">case</span> RED<span class="token operator">:</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token operator">=</span>light<span class="token punctuation">.</span>YELLOW<span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> GREEN<span class="token operator">:</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token operator">=</span>light<span class="token punctuation">.</span>RED<span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> YELLOW<span class="token operator">:</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token operator">=</span>light<span class="token punctuation">.</span>GREEN<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">change</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -559,7 +583,7 @@ Name varchar(20)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/07/27/mysql-xue-xi-bi-ji-4/">http://example.com/2021/07/27/mysql-xue-xi-bi-ji-4/</a>
+                    <a href="http://example.com/2021/08/16/mei-ju/">http://example.com/2021/08/16/mei-ju/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -643,7 +667,7 @@ Name varchar(20)
         repo: 'gaojiancoder.github.io',
         owner: 'gaojiancoder',
         admin: "gaojiancoder",
-        id: '2021-07-27T10-14-30',
+        id: '2021-08-16T23-21-28',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -671,17 +695,18 @@ Name varchar(20)
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/07/29/maven-chuang-jian-yu-shi-yong/">
+                <a href="/2021/08/16/mei-ju/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="maven创建与使用">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="枚举">
                         
-                        <span class="card-title">maven创建与使用</span>
+                        <span class="card-title">枚举</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -691,21 +716,22 @@ Name varchar(20)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-07-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/maven/" class="post-category">
-                                    maven
+                            <a href="/categories/Enum/" class="post-category">
+                                    Enum
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -724,13 +750,13 @@ Name varchar(20)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/07/26/mysql-xue-xi-bi-ji-3/">
+                <a href="/2021/08/16/java8-stream-api-liao-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="MySQL学习笔记3">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="java8 Stream API 了解">
                         
-                        <span class="card-title">MySQL学习笔记3</span>
+                        <span class="card-title">java8 Stream API 了解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -741,14 +767,14 @@ Name varchar(20)
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-07-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MySQL/" class="post-category">
-                                    MySQL
+                            <a href="/categories/Stream/" class="post-category">
+                                    Stream
                                 </a>
                             
                             
