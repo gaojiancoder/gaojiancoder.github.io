@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>个人页面云服务</title>
+      <link href="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/"/>
+      <url>/2021/08/21/ge-ren-ye-mian-yun-fu-wu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="任务名称：个人主页项目"><a href="#任务名称：个人主页项目" class="headerlink" title="任务名称：个人主页项目"></a>任务名称：个人主页项目</h1><h2 id="项目部署与云服务搭建"><a href="#项目部署与云服务搭建" class="headerlink" title="项目部署与云服务搭建"></a>项目部署与云服务搭建</h2><h3 id="1-购买阿里云宝塔服务器"><a href="#1-购买阿里云宝塔服务器" class="headerlink" title="1.购买阿里云宝塔服务器"></a>1.购买阿里云宝塔服务器</h3><p><a href="https://www.aliyun.com/minisite/goods?userCode=k6ji3ksd">https://www.aliyun.com/minisite/goods?userCode=k6ji3ksd</a></p><p>2.<a href="https://account.aliyun.com/login/login.htm?oauth_callback=https://swas.console.aliyun.com/&amp;lang=zh#/servers">https://account.aliyun.com/login/login.htm?oauth_callback=https%3A%2F%2Fswas.console.aliyun.com%2F&amp;lang=zh#/servers</a></p><h3 id="登陆阿里云"><a href="#登陆阿里云" class="headerlink" title="登陆阿里云"></a>登陆阿里云</h3><p>在服务器列表，点击对应服务器详情</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/1.png" alt="1"></p><p>会来到如图所示的服务器详情页</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/2.png" alt="2"></p><p>然后建立连接</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/3.png" alt="3"></p><p>输入网址然后输入上图得到的账号密码</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/4.png" alt="4"></p><p>进入后点击软件商店搜索下载应用</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/5.png" alt="5"></p><p>进入tomcat设置界面修改端口号</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/6.png" alt="6"></p><p>之后点击服务重启tomcat即可</p><h3 id="点击文件找到tomcat文件夹点击进入"><a href="#点击文件找到tomcat文件夹点击进入" class="headerlink" title="点击文件找到tomcat文件夹点击进入"></a>点击文件找到tomcat文件夹点击进入</h3><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/7.png" alt="7"></p><p>点击进入ROOT中删除所有文件</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/8.png" alt="7"></p><p>进入<a href="https://github.com/gaojiancoder/-/tree/main%E5%B0%86%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD%E4%B8%8B%E6%9D%A5">https://github.com/gaojiancoder/-/tree/main将相关文件下载下来</a></p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/9.png" alt="9"></p><p>除了不要的文件夹其余全部加入ROOT文件夹中</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/10.png" alt="10"></p><p>进入db.properties中修改内容</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/11.png" alt="11"></p><p>将数据名和用户名密码写入db.properties中</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/12.png" alt="12"></p><p>输入网址成功操作</p><p><img src="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/13.png" alt="13"></p><p>创建成功</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>面向对象</title>
       <link href="/2021/08/21/mian-xiang-dui-xiang/"/>
       <url>/2021/08/21/mian-xiang-dui-xiang/</url>
