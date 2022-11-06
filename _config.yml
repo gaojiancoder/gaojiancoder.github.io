@@ -106,8 +106,8 @@ theme: matery
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: 'git'
-  repo: https://github.com/gaojiancoder/gaojiancoder.github.io
-#  repo: git@github.com:gaojiancoder/gaojiancoder.github.io.git
+#  repo: https://github.com/gaojiancoder/gaojiancoder.github.io
+  repo: git@github.com:gaojiancoder/gaojiancoder.github.io.git
   branch: main
 
 permalink_pinyin:
