@@ -29,31 +29,6 @@
     
     
     <entry>
-      <title>有关博客内容</title>
-      <link href="/2022/11/08/you-guan-bo-ke-nei-rong/"/>
-      <url>/2022/11/08/you-guan-bo-ke-nei-rong/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Hexo搭建博客"><a href="#Hexo搭建博客" class="headerlink" title="Hexo搭建博客"></a>Hexo搭建博客</h1><p>1,注册github账号并创建仓库 仓库名和hexo博客域名一直</p><p>2，安装node.js        </p><ul><li>安装cnpm设置淘宝镜像源</li><li>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a></li></ul><p>3，安装git软件</p><p>4，安装hexo</p><ul><li>cnpm install -g hexo-cli</li><li>hexo -v</li></ul><p>5，创建博客文件夹</p><p>6，初始化博客代码</p><ul><li>hexo init</li><li>hexo s启动hexo</li></ul><p>7，安装git插件</p><ul><li>cnpm install –save hexo-deployer-git</li></ul><p>8,将本地文件夹和github远程进行连接</p><p>在文件夹下的 <em>config.yml中的尾部添加</em></p><ul><li>type: git<br> repo: 创建博客的github仓库的git地址<br> branch: main</li></ul><p>9,hexo clean清理</p><p>hexo g生成</p><p>hexo s测试成果</p><p>推送远端 hexo d</p><ul><li>部署到远端</li></ul><p>10写博客操作</p><ul><li>hexo n “文章名”</li></ul><h1 id="另一台电脑续写博客"><a href="#另一台电脑续写博客" class="headerlink" title="另一台电脑续写博客"></a>另一台电脑续写博客</h1><p>1，在GitHub下载hexo文件</p><ul><li><p>通过git地址克隆博客文件夹</p></li><li><p>git clone git地址</p></li><li><p>将电脑的ssh添加到github上</p></li><li><p>测试提交</p></li></ul><p>hexo是通过hexo文件夹自动生成gaojiancoder.github.io中的文件</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Hexo </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Daily accumulation </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>个人页面云服务</title>
       <link href="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/"/>
       <url>/2021/08/21/ge-ren-ye-mian-yun-fu-wu/</url>
