@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面向对象, 一个小白的成功之路">
+    <meta name="keywords" content="JspAndServlet, 一个小白的成功之路">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面向对象 | 一个小白的成功之路</title>
+    <title>JspAndServlet | 一个小白的成功之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面向对象</h1>
+                    <h1 class="description center-align post-title">JspAndServlet</h1>
                 </div>
             </div>
         </div>
@@ -431,8 +431,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/notes/">
-                                <span class="chip bg-color">notes</span>
+                            <a href="/tags/Study/">
+                                <span class="chip bg-color">Study</span>
                             </a>
                         
                     </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/object/" class="post-category">
-                                object
+                            <a href="/categories/JspAndServlet/" class="post-category">
+                                JspAndServlet
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-21
+                    2022-11-28
                 </div>
                 
 
@@ -465,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    894
                 </div>
                 
 
@@ -500,195 +500,158 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="面向对象概述"><a href="#面向对象概述" class="headerlink" title="面向对象概述"></a>面向对象概述</h1><h2 id="本章重点"><a href="#本章重点" class="headerlink" title="本章重点"></a>本章重点</h2><ul>
-<li>类与方法</li>
-<li>构造方法</li>
-<li>访问权限</li>
-<li>继承</li>
-<li>多态</li>
-<li>抽象和接口</li>
-<li>内存分析</li>
-</ul>
-<h2 id="面向对象和面向过程"><a href="#面向对象和面向过程" class="headerlink" title="面向对象和面向过程"></a>面向对象和面向过程</h2><p>面向对象：侧重的是对象，自己是上帝视角，你创建大象，告诉大象，进冰箱，不用管它怎么进</p>
-<p>优点：可扩展性强，维护成本低</p>
-<p>缺点：新手上手难</p>
-<p>面向过程：侧重的是过程，如何大象装冰箱，第一步打开门，第二步装大象，第三步关门。</p>
-<p>优点：简单</p>
-<p>缺点：代码量大了维护性非常差</p>
-<h2 id="构造放法"><a href="#构造放法" class="headerlink" title="构造放法"></a>构造放法</h2><p>在创建对象的时候自动调用的方法</p>
-<p>语法：</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> 类名<span class="token punctuation">(</span>传参<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-  
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+                <h1 id="Servlet和JSP"><a href="#Servlet和JSP" class="headerlink" title="Servlet和JSP"></a>Servlet和JSP</h1><h2 id="1-安装Tomcat"><a href="#1-安装Tomcat" class="headerlink" title="1.安装Tomcat"></a>1.安装Tomcat</h2><h2 id="2-Servlet和Jsp快速入门"><a href="#2-Servlet和Jsp快速入门" class="headerlink" title="2.Servlet和Jsp快速入门"></a>2.Servlet和Jsp快速入门</h2><p>2.1 login.jsp</p>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;%--
+  Created by IntelliJ IDEA.
+  User: lixi
+  Date: 2022/11/28
+  Time: 15:34
+  To change this template use File | Settings | File Templates.
+--%>
+&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>login<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/001JavaWeb/loginServlet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+            username: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+            password: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>登录<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>注意：</p>
+<p>2.2LoginServlet2</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>javaweb<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServlet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletRequest</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletResponse</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LoginServlet2</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token comment">/**
+     * 只支持get请求
+     */</span>
+<span class="token comment">//    @Override</span>
+<span class="token comment">//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;</span>
+<span class="token comment">//    &#125;</span>
+
+    <span class="token comment">/**
+     * 只支持post请求
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doPost</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> 
+                          <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> 
+    <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">//1. 接收参数</span>
+        <span class="token class-name">String</span> username <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> password <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//2. 业务</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"admin"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token string">"123"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 校验正确，登录成功</span>
+            response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"welcome to main frame2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 登录失败</span>
+            response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"sorry, your username or password error.please try again2!!!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>2.3web.xml</p>
+<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>web-app</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/javaee<span class="token punctuation">"</span></span>
+         <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
+         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd<span class="token punctuation">"</span></span>
+         <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!--
+        配置servlet
+            servlet-name : 随便
+            servlet-class : 表示servlet的真是代码
+    --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">></span></span>loginServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-class</span><span class="token punctuation">></span></span>com.javaweb.web.servlet.LoginServlet2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-class</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet</span><span class="token punctuation">></span></span>
+
+    <span class="token comment">&lt;!--
+        配置sevlet的映射
+           servlet-name : 表示引用servlet标签中的servlet-name标签的值
+           url-pattern : 访问servle的请求url资源路径
+    --></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-mapping</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">></span></span>loginServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url-pattern</span><span class="token punctuation">></span></span>/loginServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url-pattern</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-mapping</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>web-app</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="3-请求和响应"><a href="#3-请求和响应" class="headerlink" title="3.请求和响应"></a>3.请求和响应</h2><p>3.1HttpServletRequest对象</p>
 <ul>
-<li>没有返回值</li>
-<li>在我们new的时候，自动调用构造方法</li>
+<li>get和post请求</li>
 </ul>
-<p>作用：在创建对象的时候，给对象设置属性信息</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/1.png" alt="image-20210821122825731"></p>
-<h2 id="构造方法的重载"><a href="#构造方法的重载" class="headerlink" title="构造方法的重载"></a>构造方法的重载</h2><p>构造方法也是方法，也可以重载</p>
-<p>作用：可以用更多的方式去创建对象</p>
-<p>使用this可以访问其他构造方法  this()</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/2.png" alt="image-20210821123534551"></p>
-<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p>1.面向对象的思维来模拟LOL里的盖伦上阵杀敌</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/3.png" alt="image-20210821124826776"></p>
-<p>2.用面向对象的思维完成植物大战僵尸</p>
-<p>植物</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/4.png" alt="image-20210821124846522"></p>
-<p>僵尸</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/5.png" alt="image-20210821124901131"></p>
-<p>场景</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/6.png" alt="image-20210821124913078"></p>
-<h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><p>静态的内容在内存中是保留一份，并且各个对象之间进行共享</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/7.png" alt="image-20210821125957988"></p>
-<p>推荐使用类名去访问</p>
-<p>特点：</p>
+<p>get请求提交的数据是放在浏览器地址栏种的，不安全；post请求存放在请求体中的，安全（数据在请求体）中）。</p>
+<p>get请求传递的数据量不大，post请求传递的数据量大，密文传递数据。</p>
+<p>get请求效率更高，默认都是用的get请求</p>
 <ul>
-<li>数据共享</li>
-<li>属于类的，不属于对象</li>
-<li>优先于对象产生</li>
+<li>主要方法</li>
 </ul>
-<p>通用构造器，静态构造器</p>
-<p>创建对象的过程：</p>
-<p>1静态构造器</p>
-<p>2通用构造器</p>
-<p>构造方法—&gt;创建对象</p>
-<h2 id="包和导包"><a href="#包和导包" class="headerlink" title="包和导包"></a>包和导包</h2><p>包：本质上是文件夹</p>
-<p>导包：import包+类</p>
-<p>不需要导包：</p>
+<p>String getParameter(String name) : 接收请求传递的参数 </p>
+<p>void setCharacterEncoding(String encoding) : 设置每个请求的编码</p>
 <ul>
-<li>在自己包里</li>
-<li>java.lang包下的所有内容不用导包<ul>
-<li>String</li>
-<li>System.out.print</li>
+<li>请求乱码</li>
 </ul>
-</li>
-</ul>
-<h2 id="访问权限"><a href="#访问权限" class="headerlink" title="访问权限"></a>访问权限</h2><p>public：公共的  哪里都可以使用</p>
-<p>private：私有的  只有自己的类里可以使用</p>
-<p>default：包访问权限   在自己的包里可以使用</p>
-<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>继承：子类可以自动拥有父类中除了私有内容外的其他所有内容</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> 类 <span class="token keyword">extends</span> 父类<span class="token punctuation">&#123;</span>
-  
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>作用：简化代码           重复操作的行为可写为父类</p>
-<p>子类对父类进行了扩展</p>
-<h2 id="super关键字"><a href="#super关键字" class="headerlink" title="super关键字"></a>super关键字</h2><p>super：表示父类中的内容</p>
-<p>This：表示自己类中的内容</p>
-<p>用super和this来区分父类和子类中重要的内容</p>
-<p>创建对象的过程：先创建父类的对象然后创建子类的对象</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/8.png" alt="image-20210821135635313"></p>
-<p>小总结：</p>
+<p>如果我们的请求，有中文，如果我们不处理，就会乱码。</p>
 <ul>
-<li>super可以获取父类中的内容</li>
-<li>可以调用父类中的构造方法，必须卸载子类构造方法的第一行，如果父类的构造是无参的可以不写，如果有参数必须要写</li>
+<li>get请求乱码</li>
 </ul>
-<h2 id="练习2"><a href="#练习2" class="headerlink" title="练习2"></a>练习2</h2><p><img src="/2021/08/21/mian-xiang-dui-xiang/9.png" alt="image-20210821135729924"></p>
-<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Game</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"开机，准备就绪"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
+<p>tomcat7以及以下的版本，客户端以UTF-8的编码传递数据到服务器，而服务器端的request对象默认使用iso8859-1这和个编码集。解决办法就是先获取到request对象，然后以iso8859-1字符编码转换原始的字节数组，然后使用指定编码编码成字符串就可以了。tomcat8以及以上的版本get请求没有乱码问题。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//1. 接收参数</span>
+<span class="token class-name">String</span> username <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+username <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>username<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">"iso8859-1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"我要打游戏"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"关机，睡觉"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> DNF <span class="token keyword">extends</span> <span class="token class-name">Game</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"玩DNF"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> LOL <span class="token keyword">extends</span> <span class="token class-name">Game</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"玩LOL"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> CS <span class="token keyword">extends</span> <span class="token class-name">Game</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"玩CS"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Palyer</span><span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">happy</span><span class="token punctuation">(</span><span class="token class-name">Game</span> game<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
-        game<span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        game<span class="token punctuation">.</span><span class="token function">play</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        game<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"开心"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Client</span> <span class="token punctuation">&#123;</span>
-    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
-        <span class="token class-name">Game</span> game1 <span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">DNF</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Game</span> game2 <span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">LOL</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Game</span> game3 <span class="token operator">=</span><span class="token keyword">new</span> <span class="token function">CS</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">Palyer</span> palyer <span class="token operator">=</span><span class="token keyword">new</span> <span class="token class-name">Palyer</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        palyer<span class="token punctuation">.</span><span class="token function">happy</span><span class="token punctuation">(</span>game1<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        palyer<span class="token punctuation">.</span><span class="token function">happy</span><span class="token punctuation">(</span>game3<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        palyer<span class="token punctuation">.</span><span class="token function">happy</span><span class="token punctuation">(</span>game2<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><ul>
-<li><p>被final修饰的变量不可以被改变</p>
-</li>
-<li><p>被final修饰的方法不可以重写</p>
-</li>
-<li><p>被final修饰的类不可以被继承</p>
-<p>final是不可变的</p>
-</li>
-</ul>
-<h2 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h2><p>抽象类：如果一个类中有抽象方法，这个类必须是抽象类</p>
-<p>抽象方法：使用abstract来修饰，不可以有方法体，直接用分好结束</p>
-<p>特点：</p>
 <ul>
-<li>抽象类不可以创建对象</li>
-<li>抽象类的子类，必须重写父类中的抽像方法，否则子类必须是抽象类</li>
-<li>通过抽象类可以强制的要求子类中必须有的方法‘</li>
-<li>抽象类中可以有正常的方法</li>
+<li>post请求乱码</li>
 </ul>
-<h2 id="成员变量初始值"><a href="#成员变量初始值" class="headerlink" title="成员变量初始值"></a>成员变量初始值</h2><p>java中所有的变量必须先声明后赋值才能使用</p>
-<p>Java中成员变量，在创建对象的时候，都会执行一次初始化操作，都会给一个默认自</p>
-<p>基本数据类型默认值都是0，包括boolean-&gt;false</p>
-<p>引用数据类型：null</p>
-<h2 id="equals和"><a href="#equals和" class="headerlink" title="equals和=="></a>equals和==</h2><p>==判断左右两端的 数据类型是否一致</p>
-<p>equals：判断两个对象是否相等</p>
-<p>字符串要用equals来判断</p>
-<p>==判断的是内存地址</p>
-<p>equals判断的是值</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/10.png" alt="image-20210821213308999"></p>
-<h2 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h2><h3 id="程序错误分三种"><a href="#程序错误分三种" class="headerlink" title="程序错误分三种"></a>程序错误分三种</h3><p>1.编译错误</p>
-<p>2.运行时错误</p>
-<p>3逻辑错误</p>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/21.png" alt="1"></p>
-<h3 id="错误与异常的区别"><a href="#错误与异常的区别" class="headerlink" title="错误与异常的区别"></a>错误与异常的区别</h3><p>错误：是无法被处理的，程序在运行中出现的比较严重的问题</p>
-<p>异常：能够被程序本身处理的</p>
-<p>父类不声明异常继承的子类也不可以声明异常</p>
-<p>父类声明异常，子类声明的异常不能超过父类异常的范围</p>
-<h3 id="为什么要自定义异常"><a href="#为什么要自定义异常" class="headerlink" title="为什么要自定义异常"></a>为什么要自定义异常</h3><ul>
-<li><p>1.封装</p>
-</li>
-<li><p>2.快速定位</p>
-</li>
-</ul>
-<p>自定义异常步骤</p>
+<p>实际上get请求处理乱码的方式可以沿用在post请求上。表单传递的数据是以UTF-8的形式传递过来的，因此也需要使用UTF-8来接收。</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//1. 接收参数</span>
+<span class="token comment">//1.1 必须要写在接收参数之前</span>
+request<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token class-name">String</span> username <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> password <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>username <span class="token operator">+</span> <span class="token string">"==="</span> <span class="token operator">+</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>3.2HttpServletResponse对象</p>
+<p>服务端向客户端发的请求叫做响应。</p>
 <ul>
-<li>创建类</li>
-<li>继承Exception类或者Exception子类</li>
-<li>重写构造方法</li>
+<li>主要方法</li>
 </ul>
-<p><img src="/2021/08/21/mian-xiang-dui-xiang/22.png" alt="2"></p>
+<p>setHeader(name, value) : 用于设置响应的头</p>
+<p>setContentType(String) : 设置响应文件类型、编码类型</p>
+<p>setCharacterEncoding(String) : 设置响应编码</p>
+<p>getWriter() : 获取到向当前页面输出的字符流</p>
+<ul>
+<li>使用举例</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;html>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;body>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;h1>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"response demo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;/h1>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;/body>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;/html>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<ul>
+<li>输出乱码</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java">response<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//  response.setHeader("Content-type", "text/html;charset=UTF-8");</span>
+response<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -715,7 +678,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2021/08/21/mian-xiang-dui-xiang/">http://example.com/2021/08/21/mian-xiang-dui-xiang/</a>
+                    <a href="http://example.com/2022/11/28/jspandservlet/">http://example.com/2022/11/28/jspandservlet/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -753,8 +716,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/notes/">
-                                    <span class="chip bg-color">notes</span>
+                                <a href="/tags/Study/">
+                                    <span class="chip bg-color">Study</span>
                                 </a>
                             
                         </div>
@@ -800,17 +763,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/08/21/ge-ren-ye-mian-yun-fu-wu/">
+                <a href="/2022/11/28/jspandservlet/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="个人页面云服务">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JspAndServlet">
                         
-                        <span class="card-title">个人页面云服务</span>
+                        <span class="card-title">JspAndServlet</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -820,22 +784,27 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-08-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-28
+                            </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Gao Jian
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/JspAndServlet/" class="post-category">
+                                    JspAndServlet
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/">
-                        <span class="chip bg-color">notes</span>
+                    <a href="/tags/Study/">
+                        <span class="chip bg-color">Study</span>
                     </a>
                     
                 </div>
@@ -849,13 +818,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/08/16/mei-ju/">
+                <a href="/2022/11/26/bootstrap/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="枚举">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="BootStrap">
                         
-                        <span class="card-title">枚举</span>
+                        <span class="card-title">BootStrap</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -866,14 +835,14 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-26
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Enum/" class="post-category">
-                                    Enum
+                            <a href="/categories/BootStrap/" class="post-category">
+                                    BootStrap
                                 </a>
                             
                             
@@ -883,8 +852,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/notes/">
-                        <span class="chip bg-color">notes</span>
+                    <a href="/tags/Study/">
+                        <span class="chip bg-color">Study</span>
                     </a>
                     
                 </div>
