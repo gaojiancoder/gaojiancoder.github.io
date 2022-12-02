@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="JspAndServlet, 一个小白的成功之路">
+    <meta name="keywords" content="ServletAndJSP, 一个小白的成功之路">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>JspAndServlet | 一个小白的成功之路</title>
+    <title>ServletAndJSP | 一个小白的成功之路</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">JspAndServlet</h1>
+                    <h1 class="description center-align post-title">ServletAndJSP</h1>
                 </div>
             </div>
         </div>
@@ -443,8 +443,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/JspAndServlet/" class="post-category">
-                                JspAndServlet
+                            <a href="/categories/Servlet/" class="post-category">
+                                Servlet
                             </a>
                         
                     </div>
@@ -456,7 +456,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-11-28
+                    2022-12-02
                 </div>
                 
 
@@ -465,14 +465,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    894
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    6 分
                 </div>
                 
 
@@ -500,158 +500,217 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Servlet和JSP"><a href="#Servlet和JSP" class="headerlink" title="Servlet和JSP"></a>Servlet和JSP</h1><h2 id="1-安装Tomcat"><a href="#1-安装Tomcat" class="headerlink" title="1.安装Tomcat"></a>1.安装Tomcat</h2><h2 id="2-Servlet和Jsp快速入门"><a href="#2-Servlet和Jsp快速入门" class="headerlink" title="2.Servlet和Jsp快速入门"></a>2.Servlet和Jsp快速入门</h2><p>2.1 login.jsp</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">&lt;%--
-  Created by IntelliJ IDEA.
-  User: lixi
-  Date: 2022/11/28
-  Time: 15:34
-  To change this template use File | Settings | File Templates.
---%>
-&lt;%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">></span></span>login<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/001JavaWeb/loginServlet<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-            username: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>username<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
-            password: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>password<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">></span></span>
-            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>登录<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>2.2LoginServlet2</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>javaweb<span class="token punctuation">.</span>web<span class="token punctuation">.</span>servlet</span><span class="token punctuation">;</span>
-
-<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletException</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServlet</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletRequest</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletResponse</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
-
-<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LoginServlet2</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">&#123;</span>
-
-    <span class="token comment">/**
-     * 只支持get请求
-     */</span>
-<span class="token comment">//    @Override</span>
-<span class="token comment">//    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;</span>
-<span class="token comment">//    &#125;</span>
-
-    <span class="token comment">/**
-     * 只支持post请求
-     */</span>
-    <span class="token annotation punctuation">@Override</span>
-    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doPost</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> 
-                          <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> 
-    <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
-        <span class="token comment">//1. 接收参数</span>
-        <span class="token class-name">String</span> username <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token class-name">String</span> password <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token comment">//2. 业务</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"admin"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>username<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token string">"123"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>password<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 校验正确，登录成功</span>
-            response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"welcome to main frame2"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 登录失败</span>
-            response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"sorry, your username or password error.please try again2!!!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">&#125;</span>
-    <span class="token punctuation">&#125;</span>
-<span class="token punctuation">&#125;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>2.3web.xml</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>web-app</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/javaee<span class="token punctuation">"</span></span>
-         <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
-         <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd<span class="token punctuation">"</span></span>
-         <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>4.0<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-
-    <span class="token comment">&lt;!--
-        配置servlet
-            servlet-name : 随便
-            servlet-class : 表示servlet的真是代码
-    --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">></span></span>loginServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-class</span><span class="token punctuation">></span></span>com.javaweb.web.servlet.LoginServlet2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-class</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet</span><span class="token punctuation">></span></span>
-
-    <span class="token comment">&lt;!--
-        配置sevlet的映射
-           servlet-name : 表示引用servlet标签中的servlet-name标签的值
-           url-pattern : 访问servle的请求url资源路径
-    --></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-mapping</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>servlet-name</span><span class="token punctuation">></span></span>loginServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-name</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url-pattern</span><span class="token punctuation">></span></span>/loginServlet<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url-pattern</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>servlet-mapping</span><span class="token punctuation">></span></span>
-
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>web-app</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="3-请求和响应"><a href="#3-请求和响应" class="headerlink" title="3.请求和响应"></a>3.请求和响应</h2><p>3.1HttpServletRequest对象</p>
+                <h1 id="1-Web"><a href="#1-Web" class="headerlink" title="1.Web"></a>1.Web</h1><p>就是万维网。也可以理解为网站。我们通过网址访问的一切都是万维网中的资源：</p>
 <ul>
-<li>get和post请求</li>
+<li>静态资源：指我们访问的时候<strong>数据始终不变</strong>的称之为静态资源：图片、视频、css、html</li>
+<li>动态资源：指我们访问的数据是由<strong>程序产生的</strong>，不同的时间、不同的设备访问的内容各不相同。Servlet&amp;JSP。</li>
 </ul>
-<p>get请求提交的数据是放在浏览器地址栏种的，不安全；post请求存放在请求体中的，安全（数据在请求体）中）。</p>
-<p>get请求传递的数据量不大，post请求传递的数据量大，密文传递数据。</p>
-<p>get请求效率更高，默认都是用的get请求</p>
+<h2 id="1-1C-S架构和B-S架构"><a href="#1-1C-S架构和B-S架构" class="headerlink" title="1.1C/S架构和B/S架构"></a>1.1C/S架构和B/S架构</h2><ul>
+<li>c/s : client &amp; server :客户端以及服务端架构：炉石传说、魔兽世界、传奇、奇迹、QQ…</li>
+<li>b/s：browser &amp; server:浏览器以及服务器架构：开心农场、传奇、梦幻奇缘</li>
+</ul>
+<h2 id="1-2Tomcat"><a href="#1-2Tomcat" class="headerlink" title="1.2Tomcat"></a>1.2Tomcat</h2><ul>
+<li><p>保证你的环境变量一定配置了JAVA_HOME</p>
+</li>
+<li><p>解决启动的时候命令行窗口乱码问题</p>
 <ul>
-<li>主要方法</li>
+<li><p>修改apache-tomcat-9.0.33\conf\logging.properties</p>
+</li>
+<li><p>默认情况下，这个编码格式UTF-8更改为GBK即可    </p>
+</li>
+<li><p>java.util.logging.ConsoleHandler.encoding = GBK</p>
+</li>
 </ul>
-<p>String getParameter(String name) : 接收请求传递的参数 </p>
-<p>void setCharacterEncoding(String encoding) : 设置每个请求的编码</p>
+</li>
+</ul>
+<h1 id="2-Http协议"><a href="#2-Http协议" class="headerlink" title="2.Http协议"></a>2.Http协议</h1><h2 id="2-1什么是http协议"><a href="#2-1什么是http协议" class="headerlink" title="2.1什么是http协议"></a>2.1什么是http协议</h2><p>超文本传输协议。是一个基于请求和响应的协议。并且是一个无状态的协议。应用层。底层是依赖TCP协议，TCP协议经典三次握手。</p>
+<h2 id="2-2HTTP请求报文的格式"><a href="#2-2HTTP请求报文的格式" class="headerlink" title="2.2HTTP请求报文的格式"></a>2.2HTTP请求报文的格式</h2><ol>
+<li>请求首行： 请求方式/地址 URI协议/版本</li>
+<li>请求头： Request Header（请求头有很多，都是key:value）</li>
+<li>空行</li>
+<li>请求正文（请求体）</li>
+</ol>
+<p>tip:get请求有头没体。 只有post请求有请求体，post的请求体是用来存放参数</p>
 <ul>
-<li>请求乱码</li>
+<li>响应报文和请求报文并无什么不一致的 </li>
 </ul>
-<p>如果我们的请求，有中文，如果我们不处理，就会乱码。</p>
+<h2 id="2-3响应状态码"><a href="#2-3响应状态码" class="headerlink" title="2.3响应状态码"></a>2.3响应状态码</h2><ul>
+<li>客户端请求成功。</li>
+<li>302 : 重定向。</li>
+<li>403 ：服务器接收到了请求，但是拒绝提供服务。服务器通常会在响应体中提示为何不提供服务。</li>
+<li>404 ：请求的资源不存在。</li>
+<li>500 ：服务端发生了不可预期错误，导致无法完成客户端请去。</li>
+</ul>
+<h1 id="3-Servlet"><a href="#3-Servlet" class="headerlink" title="3.Servlet"></a>3.Servlet</h1><h2 id="3-1写servlet其实3种方式"><a href="#3-1写servlet其实3种方式" class="headerlink" title="3.1写servlet其实3种方式"></a>3.1写servlet其实3种方式</h2><ol>
+<li>实现servlet接口</li>
+<li>继承GernericServlet抽象类</li>
+<li>继承HttpServlet的类.    ———&gt; 目前常用</li>
+</ol>
+<h2 id="3-2请求和响应"><a href="#3-2请求和响应" class="headerlink" title="3.2请求和响应"></a>3.2请求和响应</h2><h3 id="3-2-1HttpServletRequest对象"><a href="#3-2-1HttpServletRequest对象" class="headerlink" title="3.2.1HttpServletRequest对象"></a>3.2.1HttpServletRequest对象</h3><ul>
+<li><p>主要方法</p>
 <ul>
-<li>get请求乱码</li>
+<li><p>String getParameter(String name) : 接收请求传递的参数 </p>
+</li>
+<li><p>void setCharacterEncoding(String encoding) : 设置每个请求的编码</p>
+</li>
 </ul>
-<p>tomcat7以及以下的版本，客户端以UTF-8的编码传递数据到服务器，而服务器端的request对象默认使用iso8859-1这和个编码集。解决办法就是先获取到request对象，然后以iso8859-1字符编码转换原始的字节数组，然后使用指定编码编码成字符串就可以了。tomcat8以及以上的版本get请求没有乱码问题。</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//1. 接收参数</span>
-<span class="token class-name">String</span> username <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-username <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">String</span><span class="token punctuation">(</span>username<span class="token punctuation">.</span><span class="token function">getBytes</span><span class="token punctuation">(</span><span class="token string">"iso8859-1"</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<ul>
-<li>post请求乱码</li>
+</li>
+<li><p>请求乱码</p>
+</li>
 </ul>
-<p>实际上get请求处理乱码的方式可以沿用在post请求上。表单传递的数据是以UTF-8的形式传递过来的，因此也需要使用UTF-8来接收。</p>
 <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//1. 接收参数</span>
 <span class="token comment">//1.1 必须要写在接收参数之前</span>
 request<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
 <span class="token class-name">String</span> username <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">String</span> password <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>username <span class="token operator">+</span> <span class="token string">"==="</span> <span class="token operator">+</span> password<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token class-name">String</span> password <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>3.2HttpServletResponse对象</p>
-<p>服务端向客户端发的请求叫做响应。</p>
-<ul>
-<li>主要方法</li>
-</ul>
-<p>setHeader(name, value) : 用于设置响应的头</p>
-<p>setContentType(String) : 设置响应文件类型、编码类型</p>
-<p>setCharacterEncoding(String) : 设置响应编码</p>
-<p>getWriter() : 获取到向当前页面输出的字符流</p>
-<ul>
-<li>使用举例</li>
-</ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;html>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;body>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;h1>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"response demo"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;/h1>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;/body>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"&lt;/html>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<ul>
+<h3 id="3-2-2HttpServletResponse对象"><a href="#3-2-2HttpServletResponse对象" class="headerlink" title="3.2.2HttpServletResponse对象"></a>3.2.2HttpServletResponse对象</h3><ul>
 <li>输出乱码</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">response<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <pre class="line-numbers language-java" data-language="java"><code class="language-java">response<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token comment">//  response.setHeader("Content-type", "text/html;charset=UTF-8");</span>
 response<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="3-3Servlet配置"><a href="#3-3Servlet配置" class="headerlink" title="3.3Servlet配置"></a>3.3Servlet配置</h2><h3 id="3-3-1注解配置"><a href="#3-3-1注解配置" class="headerlink" title="3.3.1注解配置"></a>3.3.1注解配置</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>web</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">WebServlet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServlet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletRequest</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletResponse</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
+
+<span class="token comment">/**
+ * name : servlet-name
+ * value : url 访问地址
+ * loadOnStartup :设置启动速度
+ */</span>
+<span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"helloServlet"</span><span class="token punctuation">,</span> value <span class="token operator">=</span> <span class="token string">"/helloServelt"</span><span class="token punctuation">,</span> loadOnStartup <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">&#123;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+        response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"ok"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="3-4请求转发和重定向"><a href="#3-4请求转发和重定向" class="headerlink" title="3.4请求转发和重定向"></a>3.4请求转发和重定向</h2><h3 id="3-4-1请求转发"><a href="#3-4-1请求转发" class="headerlink" title="3.4.1请求转发"></a>3.4.1请求转发</h3><p>地址栏不进行跳转 页面进行跳转</p>
+<h3 id="3-4-2重定向"><a href="#3-4-2重定向" class="headerlink" title="3.4.2重定向"></a>3.4.2重定向</h3><p>进行两次请求 地址栏URL发生改变</p>
+ <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>web</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">WebServlet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServlet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletRequest</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletResponse</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span><span class="token string">"/forwardServlet"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ForwardServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doPost</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">//1. 接收请求参数：f : 表示进行请求转发， r ：表示进行重定向 （这是我自定义的，不表示真正有具体的操作）</span>
+        <span class="token class-name">String</span> method <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//2. 进行判断</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"f"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 进行请求转发</span>
+            <span class="token comment">// 这个地址可以时一个servlet，也可以是jsp</span>
+            request<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span><span class="token string">"/main.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 请求转发</span>
+        <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"r"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 进行重定向</span>
+            response<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span><span class="token string">"/003JavaWeb/helloServelt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 重定向</span>
+        <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"输入有无：请输入：f[请求转发] or r[重定向]"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-4-3请求转发和重定向的区别"><a href="#3-4-3请求转发和重定向的区别" class="headerlink" title="3.4.3请求转发和重定向的区别"></a>3.4.3请求转发和重定向的区别</h3><ul>
+<li><p>请求转发</p>
+</li>
+<li><ul>
+<li>是服务端行为</li>
+<li>只产生一次请求</li>
+<li>浏览器地址栏不会改变</li>
+<li>请求转发之间，request域中的数据不丢失</li>
+</ul>
+</li>
+<li><p>重定向</p>
+</li>
+<li><ul>
+<li>是客户端行为</li>
+<li>至少产生两次请求</li>
+<li>浏览器地址栏是会发生改变</li>
+<li>重定向之间，request域中的数据会丢失，获取数据需要通过session域</li>
+</ul>
+</li>
+</ul>
+<h1 id="4-过滤器和监听器"><a href="#4-过滤器和监听器" class="headerlink" title="4.过滤器和监听器"></a>4.过滤器和监听器</h1><h2 id="4-1过滤器的介绍"><a href="#4-1过滤器的介绍" class="headerlink" title="4.1过滤器的介绍"></a>4.1过滤器的介绍</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>javaweb<span class="token punctuation">.</span>web<span class="token punctuation">.</span>filter</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">WebFilter</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@WebFilter</span><span class="token punctuation">(</span><span class="token string">"/*"</span><span class="token punctuation">)</span> <span class="token comment">// 过滤路径:这个配置表示过滤所有的web资源</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ALoginFilter</span> <span class="token keyword">implements</span> <span class="token class-name">Filter</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token comment">// 临死之前</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">// 每次经过过滤路径都会调用一次</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doFilter</span><span class="token punctuation">(</span><span class="token class-name">ServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">ServletResponse</span> response<span class="token punctuation">,</span> <span class="token class-name">FilterChain</span> chain<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+            chain<span class="token punctuation">.</span><span class="token function">doFilter</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 放行， 当我们的过滤器调用了这个方法就表示，我们放行了过滤条件,就可以直接访问下一个url</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">// 出生之后</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">FilterConfig</span> config<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="4-2监听器的介绍"><a href="#4-2监听器的介绍" class="headerlink" title="4.2监听器的介绍"></a>4.2监听器的介绍</h2><ul>
+<li>ServletContextListener : 监听ServletContext对象的创建与销毁</li>
+<li>HttpSessionListener ： 监听HttpSession的创建与销毁</li>
+<li>ServeltRequestListener ： 监听ServletRequest的创建与销毁</li>
+</ul>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>javaweb<span class="token punctuation">.</span>web<span class="token punctuation">.</span>listener</span><span class="token punctuation">;</span>
+
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletContextEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletContextListener</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">WebListener</span><span class="token punctuation">;</span>
+
+<span class="token annotation punctuation">@WebListener</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyServletContextListener</span> <span class="token keyword">implements</span> <span class="token class-name">ServletContextListener</span> <span class="token punctuation">&#123;</span>
+
+    <span class="token comment">/**
+     * 初始化方法，这个方法会在serveltcontext创建的时候被调用一次
+     * @param sce
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">contextInitialized</span><span class="token punctuation">(</span><span class="token class-name">ServletContextEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"------>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+
+    <span class="token comment">/**
+     * 销毁方法，他会servletcontext被tomcat干掉的时候，调用一次
+     * @param sce
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">contextDestroyed</span><span class="token punctuation">(</span><span class="token class-name">ServletContextEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"******>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h1 id="5-Cookie-和-Session"><a href="#5-Cookie-和-Session" class="headerlink" title="5.Cookie 和 Session"></a>5.Cookie 和 Session</h1><ul>
+<li>Cookie : 当浏览器访问web服务器的时候，web服务器在响应的时候在HTTP的响应头中附带传送给浏览器的一小段数据。</li>
+<li>一旦浏览器保存了cookie，下一次浏览器在访问服务器的时候，就会把cookie再次带回给服务器。</li>
+<li>cookie保存的数据：key和value</li>
+<li>cookie是不能跨浏览器和操作系统</li>
+<li>cookie中保存了一个特殊的字段：JSESSIONID</li>
+<li>一旦浏览器设置了不保存cookie，那么session也就失效</li>
+</ul>
 
                 
             </div>
@@ -678,7 +737,7 @@ response<span class="token punctuation">.</span><span class="token function">set
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2022/11/28/jspandservlet/">http://example.com/2022/11/28/jspandservlet/</a>
+                    <a href="http://example.com/2022/12/02/servletandjsp/">http://example.com/2022/12/02/servletandjsp/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -768,13 +827,13 @@ response<span class="token punctuation">.</span><span class="token function">set
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/11/28/jspandservlet/">
+                <a href="/2022/12/02/servletandjsp/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="JspAndServlet">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="ServletAndJSP">
                         
-                        <span class="card-title">JspAndServlet</span>
+                        <span class="card-title">ServletAndJSP</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -785,14 +844,14 @@ response<span class="token punctuation">.</span><span class="token function">set
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-11-28
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-02
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/JspAndServlet/" class="post-category">
-                                    JspAndServlet
+                            <a href="/categories/Servlet/" class="post-category">
+                                    Servlet
                                 </a>
                             
                             
@@ -1005,7 +1064,7 @@ response<span class="token punctuation">.</span><span class="token function">set
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">40k</span>
+                        class="white-color">38.3k</span>
             
             
             
