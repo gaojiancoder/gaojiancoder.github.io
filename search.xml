@@ -4,25 +4,6 @@
   
     
     <entry>
-      <title>test</title>
-      <link href="/2023/03/13/test/test/"/>
-      <url>/2023/03/13/test/test/</url>
-      
-        <content type="html"><![CDATA[<p>Hello</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> test </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>mac安装RabbitMQ</title>
       <link href="/2023/01/13/mac-an-zhuang-rabbitmq/"/>
       <url>/2023/01/13/mac-an-zhuang-rabbitmq/</url>
