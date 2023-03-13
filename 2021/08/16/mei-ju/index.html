@@ -465,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    226
+                    214
                 </div>
                 
 
@@ -501,61 +501,61 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h2><h3 id="1书写格式"><a href="#1书写格式" class="headerlink" title="1书写格式"></a>1书写格式</h3><p>变量不可重复，用大写字母定义</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">public enum Season &#123;
-    SPRING,SUMMER,AUTUMN,WINTER;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">enum</span> <span class="token class-name">Season</span> <span class="token punctuation">&#123;</span>
+    SPRING<span class="token punctuation">,</span>SUMMER<span class="token punctuation">,</span>AUTUMN<span class="token punctuation">,</span>WINTER<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2枚举创建"><a href="#2枚举创建" class="headerlink" title="2枚举创建"></a>2枚举创建</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">public void test1()&#123;
-    &#x2F;&#x2F;枚举创建
-    Season season&#x3D;Season.SPRING;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="2枚举创建"><a href="#2枚举创建" class="headerlink" title="2枚举创建"></a>2枚举创建</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token comment">//枚举创建</span>
+    <span class="token class-name">Season</span> season<span class="token operator">=</span><span class="token class-name">Season</span><span class="token punctuation">.</span>SPRING<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3常用方法"><a href="#3常用方法" class="headerlink" title="3常用方法"></a>3常用方法</h3><p>values：方法返回在枚举中按照声明顺序产生的常量值组成的数组</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">public void test2()&#123;
-    Season[] values &#x3D; Season.values();
-    for (Season season:values) &#123;
-        System.out.println(season);
-    &#125;
-&#125;
-&#x2F;**SPRING
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test2</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token class-name">Season</span><span class="token punctuation">[</span><span class="token punctuation">]</span> values <span class="token operator">=</span> <span class="token class-name">Season</span><span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token class-name">Season</span> season<span class="token operator">:</span>values<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>season<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
+<span class="token comment">/**SPRING
 *SUMMER
 *AUTUMN
 *WINTER
-*&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+*/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>ordinal：某个枚举常量的索引</p>
 <h3 id="构造方法"><a href="#构造方法" class="headerlink" title="构造方法"></a>构造方法</h3><p>只能由private修饰</p>
 <p>常量必须在最前面定义</p>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">public enum light &#123;
-    RED,YELLOW,GREEN;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">enum</span> light <span class="token punctuation">&#123;</span>
+    RED<span class="token punctuation">,</span>YELLOW<span class="token punctuation">,</span>GREEN<span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h4 id="红绿灯案例"><a href="#红绿灯案例" class="headerlink" title="红绿灯案例"></a>红绿灯案例</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java">public static void main(String[] args) &#123;
-        test1 test1 &#x3D; new test1();
-        test1.test3();
-    &#125;
-    private light light1 &#x3D; light.RED;
-    public void change()&#123;
-        switch (this.light1)&#123;
-            case RED:
-                this.light1&#x3D;light.YELLOW;
-                break;
-            case GREEN:
-                this.light1&#x3D;light.RED;
-                break;
-            case YELLOW:
-                this.light1&#x3D;light.GREEN;
-        &#125;
-    &#125;
-public void test3()&#123;
-    for (int i &#x3D; 0; i &lt; 10; i++) &#123;
-        this.change();
-        System.out.println(this.light1);
+<h4 id="红绿灯案例"><a href="#红绿灯案例" class="headerlink" title="红绿灯案例"></a>红绿灯案例</h4><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        test1 test1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token function">test1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        test1<span class="token punctuation">.</span><span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+    <span class="token keyword">private</span> light light1 <span class="token operator">=</span> light<span class="token punctuation">.</span>RED<span class="token punctuation">;</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">change</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+        <span class="token keyword">switch</span> <span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+            <span class="token keyword">case</span> RED<span class="token operator">:</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token operator">=</span>light<span class="token punctuation">.</span>YELLOW<span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> GREEN<span class="token operator">:</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token operator">=</span>light<span class="token punctuation">.</span>RED<span class="token punctuation">;</span>
+                <span class="token keyword">break</span><span class="token punctuation">;</span>
+            <span class="token keyword">case</span> YELLOW<span class="token operator">:</span>
+                <span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token operator">=</span>light<span class="token punctuation">.</span>GREEN<span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">test3</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">&#123;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">10</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">change</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>light1<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    &#125;
-&#125;
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
                 
@@ -908,7 +908,7 @@ public void test3()&#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">44.3k</span>
+                        class="white-color">41.4k</span>
             
             
             

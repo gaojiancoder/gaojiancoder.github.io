@@ -465,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.5k
                 </div>
                 
 
@@ -507,7 +507,7 @@
 <li>mysql依赖</li>
 <li>jstl依赖</li>
 </ul>
-<h2 id="1-2配置web-xml"><a href="#1-2配置web-xml" class="headerlink" title="1.2配置web.xml"></a>1.2配置web.xml</h2><h3 id="1-2-1添加中央控制器DispatcherServet"><a href="#1-2-1添加中央控制器DispatcherServet" class="headerlink" title="1.2.1添加中央控制器DispatcherServet"></a>1.2.1添加中央控制器DispatcherServet</h3><h3 id="1-2-2添加配置加载springmvc-xml配置文件"><a href="#1-2-2添加配置加载springmvc-xml配置文件" class="headerlink" title="1.2.2添加配置加载springmvc.xml配置文件"></a>1.2.2添加配置加载springmvc.xml配置文件</h3><h3 id="1-2-3添加mapping映射器"><a href="#1-2-3添加mapping映射器" class="headerlink" title="1.2.3添加mapping映射器"></a>1.2.3添加mapping映射器</h3><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<h2 id="1-2配置web-xml"><a href="#1-2配置web-xml" class="headerlink" title="1.2配置web.xml"></a>1.2配置web.xml</h2><h3 id="1-2-1添加中央控制器DispatcherServet"><a href="#1-2-1添加中央控制器DispatcherServet" class="headerlink" title="1.2.1添加中央控制器DispatcherServet"></a>1.2.1添加中央控制器DispatcherServet</h3><h3 id="1-2-2添加配置加载springmvc-xml配置文件"><a href="#1-2-2添加配置加载springmvc-xml配置文件" class="headerlink" title="1.2.2添加配置加载springmvc.xml配置文件"></a>1.2.2添加配置加载springmvc.xml配置文件</h3><h3 id="1-2-3添加mapping映射器"><a href="#1-2-3添加mapping映射器" class="headerlink" title="1.2.3添加mapping映射器"></a>1.2.3添加mapping映射器</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>web-app</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/javaee<span class="token punctuation">"</span></span>
          <span class="token attr-name"><span class="token namespace">xmlns:</span>xsi</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.w3.org/2001/XMLSchema-instance<span class="token punctuation">"</span></span>
          <span class="token attr-name"><span class="token namespace">xsi:</span>schemaLocation</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd<span class="token punctuation">"</span></span>
@@ -534,7 +534,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>web-app</span><span class="token punctuation">></span></span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="1-3配置springmvc-xml配置文件"><a href="#1-3配置springmvc-xml配置文件" class="headerlink" title="1.3配置springmvc.xml配置文件"></a>1.3配置springmvc.xml配置文件</h2><h3 id="1-3-1添加组件扫描"><a href="#1-3-1添加组件扫描" class="headerlink" title="1.3.1添加组件扫描"></a>1.3.1添加组件扫描</h3><h3 id="1-3-2开启springmvc的注解方式开发"><a href="#1-3-2开启springmvc的注解方式开发" class="headerlink" title="1.3.2开启springmvc的注解方式开发"></a>1.3.2开启springmvc的注解方式开发</h3><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
+<h2 id="1-3配置springmvc-xml配置文件"><a href="#1-3配置springmvc-xml配置文件" class="headerlink" title="1.3配置springmvc.xml配置文件"></a>1.3配置springmvc.xml配置文件</h2><h3 id="1-3-1添加组件扫描"><a href="#1-3-1添加组件扫描" class="headerlink" title="1.3.1添加组件扫描"></a>1.3.1添加组件扫描</h3><h3 id="1-3-2开启springmvc的注解方式开发"><a href="#1-3-2开启springmvc的注解方式开发" class="headerlink" title="1.3.2开启springmvc的注解方式开发"></a>1.3.2开启springmvc的注解方式开发</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>beans</span> <span class="token attr-name">xmlns</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/beans<span class="token punctuation">"</span></span>
        <span class="token attr-name"><span class="token namespace">xmlns:</span>context</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/context<span class="token punctuation">"</span></span>
        <span class="token attr-name"><span class="token namespace">xmlns:</span>mvc</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>http://www.springframework.org/schema/mvc<span class="token punctuation">"</span></span>
@@ -552,20 +552,20 @@
 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>beans</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="1-3-3UserController"><a href="#1-3-3UserController" class="headerlink" title="1.3.3UserController"></a>1.3.3UserController</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.woniu.maven.web.controller;
+<h3 id="1-3-3UserController"><a href="#1-3-3UserController" class="headerlink" title="1.3.3UserController"></a>1.3.3UserController</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>maven<span class="token punctuation">.</span>web<span class="token punctuation">.</span>controller</span><span class="token punctuation">;</span>
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span></span><span class="token class-name">Controller</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">RequestMapping</span><span class="token punctuation">;</span>
 
-@Controller
-public class UserController &#123;
+<span class="token annotation punctuation">@Controller</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">UserController</span> <span class="token punctuation">&#123;</span>
 
-    @RequestMapping(&quot;&#x2F;select&quot;)
-    public String select() &#123;
-        System.out.println(&quot;-------&quot;);
-        return &quot;&quot;;
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/select"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"-------"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -607,17 +607,17 @@ public class UserController &#123;
 <ul>
 <li>BuildingController</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">@RequestMapping(&quot;&#x2F;addBuilding&quot;)
-public String addBuilding(Building building) &#123;
-    &#x2F;&#x2F; 1. 参数绑定：要求参数名和conroller中的形参名一致就能参数绑定
-&#x2F;&#x2F;        System.out.println(numbers);
-&#x2F;&#x2F;        System.out.println(units);
-&#x2F;&#x2F;        System.out.println(remarks);
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/addBuilding"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">addBuilding</span><span class="token punctuation">(</span><span class="token class-name">Building</span> building<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token comment">// 1. 参数绑定：要求参数名和conroller中的形参名一致就能参数绑定</span>
+<span class="token comment">//        System.out.println(numbers);</span>
+<span class="token comment">//        System.out.println(units);</span>
+<span class="token comment">//        System.out.println(remarks);</span>
 
-    &#x2F;&#x2F;2. 参数绑定：直接绑定对象，要求对象的属性必须得与jsp页面的name的值一一对应
-    System.out.println(building);
-    return &quot;forward:&#x2F;index.jsp&quot;;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token comment">//2. 参数绑定：直接绑定对象，要求对象的属性必须得与jsp页面的name的值一一对应</span>
+    <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span>building<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token string">"forward:/index.jsp"</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="1-6中文乱码问题"><a href="#1-6中文乱码问题" class="headerlink" title="1.6中文乱码问题"></a>1.6中文乱码问题</h2><h3 id="1-6-1统一页面字符集"><a href="#1-6-1统一页面字符集" class="headerlink" title="1.6.1统一页面字符集"></a>1.6.1统一页面字符集</h3><pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%@ page contentType&#x3D;&quot;text&#x2F;html;charset&#x3D;UTF-8&quot; language&#x3D;&quot;java&quot; %&gt;
 &lt;html&gt;
@@ -625,10 +625,10 @@ public String addBuilding(Building building) &#123;
         &lt;meta charset&#x3D;&quot;UTF-8&quot; &#x2F;&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="1-6-2启动日志乱码修改tomcat中的字符集"><a href="#1-6-2启动日志乱码修改tomcat中的字符集" class="headerlink" title="1.6.2启动日志乱码修改tomcat中的字符集"></a>1.6.2启动日志乱码修改tomcat中的字符集</h3><p>修改tomcat的logging.properties文件</p>
-<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties">java.util.logging.ConsoleHandler.encoding &#x3D; GBK<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token attr-name">java.util.logging.ConsoleHandler.encoding</span> <span class="token punctuation">=</span> <span class="token attr-value">GBK</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h3 id="1-6-3添加编码过滤器-web-xml"><a href="#1-6-3添加编码过滤器-web-xml" class="headerlink" title="1.6.3添加编码过滤器-web.xml"></a>1.6.3添加编码过滤器-web.xml</h3><p>这个过滤器主要是针对post请求</p>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!-- 配置中文编码过滤器 --></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- 配置中文编码过滤器 --></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-name</span><span class="token punctuation">></span></span>characterEncodingFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-name</span><span class="token punctuation">></span></span>
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>filter-class</span><span class="token punctuation">></span></span>org.springframework.web.filter.CharacterEncodingFilter<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-class</span><span class="token punctuation">></span></span>
@@ -643,7 +643,7 @@ public String addBuilding(Building building) &#123;
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>url-pattern</span><span class="token punctuation">></span></span>/*<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>url-pattern</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>filter-mapping</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="1-6-4在JDBC上控制文件字符集"><a href="#1-6-4在JDBC上控制文件字符集" class="headerlink" title="1.6.4在JDBC上控制文件字符集"></a>1.6.4在JDBC上控制文件字符集</h3><pre class="line-numbers language-properties" data-language="properties"><code class="language-properties">connection &#x3D; DriverManager.getConnection(&quot;jdbc:mysql:&#x2F;&#x2F;localhost:3306&#x2F;community?useUnicode&#x3D;true&amp;characterEncoding&#x3D;UTF8&quot;, &quot;root&quot;, &quot;123456&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="1-6-4在JDBC上控制文件字符集"><a href="#1-6-4在JDBC上控制文件字符集" class="headerlink" title="1.6.4在JDBC上控制文件字符集"></a>1.6.4在JDBC上控制文件字符集</h3><pre class="line-numbers language-properties" data-language="properties"><code class="language-properties"><span class="token attr-name">connection</span> <span class="token punctuation">=</span> <span class="token attr-value">DriverManager.getConnection("jdbc:mysql://localhost:3306/community?useUnicode=true&amp;characterEncoding=UTF8", "root", "123456");</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="1-7文件上传"><a href="#1-7文件上传" class="headerlink" title="1.7文件上传"></a>1.7文件上传</h2><h3 id="1-7-1导入依赖"><a href="#1-7-1导入依赖" class="headerlink" title="1.7.1导入依赖"></a>1.7.1导入依赖</h3><ul>
 <li>commons-io</li>
@@ -652,7 +652,7 @@ public String addBuilding(Building building) &#123;
 <h3 id="1-7-2配置springmvc-xml文件"><a href="#1-7-2配置springmvc-xml文件" class="headerlink" title="1.7.2配置springmvc.xml文件"></a>1.7.2配置springmvc.xml文件</h3><ul>
 <li>配置文件上传解析器</li>
 </ul>
-<pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!--
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!--
         文件上传解析器
         id :  multipartResolver : 名字必须得叫这个，大小写都不能变，否则上传的解析器就会失效
     --></span>
@@ -672,7 +672,7 @@ public String addBuilding(Building building) &#123;
     &lt;input type&#x3D;&quot;submit&quot; value&#x3D;&quot;添加&quot; &#x2F;&gt;&lt;br&gt;
 &lt;&#x2F;form&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="1-7-4配置tomcat-service-xml"><a href="#1-7-4配置tomcat-service-xml" class="headerlink" title="1.7.4配置tomcat-service.xml"></a>1.7.4配置tomcat-service.xml</h3><pre class="line-numbers language-xml" data-language="xml"><code class="language-xml"><span class="token comment">&lt;!-- 
+<h3 id="1-7-4配置tomcat-service-xml"><a href="#1-7-4配置tomcat-service-xml" class="headerlink" title="1.7.4配置tomcat-service.xml"></a>1.7.4配置tomcat-service.xml</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token comment">&lt;!-- 
   docBase = 真实路径
   path : 访问路径
 --></span>
@@ -701,93 +701,93 @@ public String addBuilding(Building building) &#123;
 <li>调用业务层添加方法参数为实体对象</li>
 <li>根据返回值进行页面跳转如果成功进行重定向失败请求转发</li>
 </ol>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.woniu.maven.web.controller;
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>maven<span class="token punctuation">.</span>web<span class="token punctuation">.</span>controller</span><span class="token punctuation">;</span>
 
-import com.woniu.maven.pojo.Building;
-import com.woniu.maven.service.BuildingService;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.multipart.MultipartFile;
+<span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>maven<span class="token punctuation">.</span>pojo<span class="token punctuation">.</span></span><span class="token class-name">Building</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>maven<span class="token punctuation">.</span>service<span class="token punctuation">.</span></span><span class="token class-name">BuildingService</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>stereotype<span class="token punctuation">.</span></span><span class="token class-name">Controller</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>bind<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">RequestMapping</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">org<span class="token punctuation">.</span>springframework<span class="token punctuation">.</span>web<span class="token punctuation">.</span>multipart<span class="token punctuation">.</span></span><span class="token class-name">MultipartFile</span><span class="token punctuation">;</span>
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-import java.util.UUID;
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletRequest</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpSession</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">File</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span><span class="token class-name">List</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>util<span class="token punctuation">.</span></span>UUID<span class="token punctuation">;</span>
 
-@Controller
-public class BuildingController &#123;
+<span class="token annotation punctuation">@Controller</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">BuildingController</span> <span class="token punctuation">&#123;</span>
 
-    private BuildingService buildingService &#x3D; new BuildingService();
+    <span class="token keyword">private</span> <span class="token class-name">BuildingService</span> buildingService <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BuildingService</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    &#x2F;*
+    <span class="token comment">/*
      * request就是参数绑定中的内置对象，需要用到就写，不用就不写
-     *&#x2F;
-    @RequestMapping(&quot;&#x2F;selectBuilding&quot;)
-    public String selectBuilding(HttpServletRequest request) &#123;
+     */</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/selectBuilding"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">selectBuilding</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 
-        &#x2F;&#x2F; 调用了业务层
-        List&lt;Building&gt; list &#x3D; buildingService.select();
+        <span class="token comment">// 调用了业务层</span>
+        <span class="token class-name">List</span><span class="token generics"><span class="token punctuation">&lt;</span><span class="token class-name">Building</span><span class="token punctuation">></span></span> list <span class="token operator">=</span> buildingService<span class="token punctuation">.</span><span class="token function">select</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        &#x2F;&#x2F; 把结果存储到作用域
-        request.setAttribute(&quot;list&quot;, list);
+        <span class="token comment">// 把结果存储到作用域</span>
+        request<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"list"</span><span class="token punctuation">,</span> list<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        &#x2F;&#x2F; 通过返回的字符串来实现请求转发或者重定向:默认执行的是请求转发
-        return &quot;forward:&#x2F;index.jsp&quot;;
-    &#125;
+        <span class="token comment">// 通过返回的字符串来实现请求转发或者重定向:默认执行的是请求转发</span>
+        <span class="token keyword">return</span> <span class="token string">"forward:/index.jsp"</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
-    &#x2F;**
+    <span class="token comment">/**
      *
      * @param building
      * @param source : 就是专门用于接收文件上传的文件
-     *&#x2F;
-    @RequestMapping(&quot;&#x2F;addBuilding&quot;)
-    public String addBuilding(Building building, MultipartFile source) &#123;
+     */</span>
+    <span class="token annotation punctuation">@RequestMapping</span><span class="token punctuation">(</span><span class="token string">"/addBuilding"</span><span class="token punctuation">)</span>
+    <span class="token keyword">public</span> <span class="token class-name">String</span> <span class="token function">addBuilding</span><span class="token punctuation">(</span><span class="token class-name">Building</span> building<span class="token punctuation">,</span> <span class="token class-name">MultipartFile</span> source<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
 
-        &#x2F;&#x2F;一、 将图片文件保存在we把服务器中
+        <span class="token comment">//一、 将图片文件保存在we把服务器中</span>
 
-        &#x2F;&#x2F;1. 参数绑定：要求参数名和conroller中的形参名一致就能参数绑定
-        &#x2F;&#x2F;2. 参数绑定：直接绑定对象，要求对象的属性必须得与jsp页面的name的值一一对应
-        &#x2F;&#x2F;3. 参数绑定： 接收图片文件
+        <span class="token comment">//1. 参数绑定：要求参数名和conroller中的形参名一致就能参数绑定</span>
+        <span class="token comment">//2. 参数绑定：直接绑定对象，要求对象的属性必须得与jsp页面的name的值一一对应</span>
+        <span class="token comment">//3. 参数绑定： 接收图片文件</span>
 
-        &#x2F;&#x2F;1. 图片的原始名称
-        String originalFilename &#x3D; source.getOriginalFilename();
-        &#x2F;&#x2F;2. 使用uuid随机一个名称和图片的原名称进行拼接
-        String uuid &#x3D; UUID.randomUUID().toString().replace(&quot;-&quot;, &quot;&quot;).toUpperCase();
-        &#x2F;&#x2F;3. 拼接原始名称和uuid随机的名称
-        String fileName &#x3D; uuid + &quot;_&quot; + originalFilename;
+        <span class="token comment">//1. 图片的原始名称</span>
+        <span class="token class-name">String</span> originalFilename <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">getOriginalFilename</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//2. 使用uuid随机一个名称和图片的原名称进行拼接</span>
+        <span class="token class-name">String</span> uuid <span class="token operator">=</span> UUID<span class="token punctuation">.</span><span class="token function">randomUUID</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">"-"</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toUpperCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//3. 拼接原始名称和uuid随机的名称</span>
+        <span class="token class-name">String</span> fileName <span class="token operator">=</span> uuid <span class="token operator">+</span> <span class="token string">"_"</span> <span class="token operator">+</span> originalFilename<span class="token punctuation">;</span>
 
-        &#x2F;&#x2F;4. 文件的类型：这个是文件的类型，我们可以控制如果不是图片就不让上传
-        String contentType &#x3D; source.getContentType();
+        <span class="token comment">//4. 文件的类型：这个是文件的类型，我们可以控制如果不是图片就不让上传</span>
+        <span class="token class-name">String</span> contentType <span class="token operator">=</span> source<span class="token punctuation">.</span><span class="token function">getContentType</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        &#x2F;&#x2F;5. 获取到img这个目录的真是路径
-        String realPath &#x3D; &quot;C:\\ftp\\imgs&quot;; &#x2F;&#x2F; img&#x2F;fileName
-        String read_img_path &#x3D; realPath + &quot;\\&quot; + fileName;
+        <span class="token comment">//5. 获取到img这个目录的真是路径</span>
+        <span class="token class-name">String</span> realPath <span class="token operator">=</span> <span class="token string">"C:\\ftp\\imgs"</span><span class="token punctuation">;</span> <span class="token comment">// img/fileName</span>
+        <span class="token class-name">String</span> read_img_path <span class="token operator">=</span> realPath <span class="token operator">+</span> <span class="token string">"\\"</span> <span class="token operator">+</span> fileName<span class="token punctuation">;</span>
 
-        &#x2F;&#x2F; 使用multipart对象的方法保存文件
-        try &#123;
-            &#x2F;&#x2F;6. 就是将你的上传的文件流保存我们刚才计算的指定路径下
-            source.transferTo(new File(read_img_path));
-        &#125; catch (IOException e) &#123;
-            e.printStackTrace();
-        &#125;
+        <span class="token comment">// 使用multipart对象的方法保存文件</span>
+        <span class="token keyword">try</span> <span class="token punctuation">&#123;</span>
+            <span class="token comment">//6. 就是将你的上传的文件流保存我们刚才计算的指定路径下</span>
+            source<span class="token punctuation">.</span><span class="token function">transferTo</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">File</span><span class="token punctuation">(</span>read_img_path<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">IOException</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
 
-        &#x2F;&#x2F;二、 保存图片的路径到数据 ： jdbc
-        &#x2F;&#x2F;1. 设置图片路径到实体对象
-        building.setbImg(fileName);
+        <span class="token comment">//二、 保存图片的路径到数据 ： jdbc</span>
+        <span class="token comment">//1. 设置图片路径到实体对象</span>
+        building<span class="token punctuation">.</span><span class="token function">setbImg</span><span class="token punctuation">(</span>fileName<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        &#x2F;&#x2F;2. 调用业务层添加楼宇
-        int code &#x3D; buildingService.addBuilding(building);
+        <span class="token comment">//2. 调用业务层添加楼宇</span>
+        <span class="token keyword">int</span> code <span class="token operator">=</span> buildingService<span class="token punctuation">.</span><span class="token function">addBuilding</span><span class="token punctuation">(</span>building<span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-        &#x2F;&#x2F;3. 跳转
-        if(code &#x3D;&#x3D; 1) &#123;
-            return &quot;redirect:&#x2F;success.jsp&quot;; &#x2F;&#x2F; 重定向
-        &#125;else &#123;
-            return &quot;forward:&#x2F;error.jsp&quot;; &#x2F;&#x2F; 请求转发
-        &#125;
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        <span class="token comment">//3. 跳转</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>code <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> <span class="token string">"redirect:/success.jsp"</span><span class="token punctuation">;</span> <span class="token comment">// 重定向</span>
+        <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token keyword">return</span> <span class="token string">"forward:/error.jsp"</span><span class="token punctuation">;</span> <span class="token comment">// 请求转发</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="1-7-7jsp接受图片数据"><a href="#1-7-7jsp接受图片数据" class="headerlink" title="1.7.7jsp接受图片数据"></a>1.7.7jsp接受图片数据</h3><pre class="line-numbers language-jsp" data-language="jsp"><code class="language-jsp">&lt;%@ page contentType&#x3D;&quot;text&#x2F;html;charset&#x3D;UTF-8&quot; language&#x3D;&quot;java&quot; %&gt;
 &lt;%@ taglib prefix&#x3D;&quot;c&quot; uri&#x3D;&quot;http:&#x2F;&#x2F;java.sun.com&#x2F;jsp&#x2F;jstl&#x2F;core&quot; %&gt;
@@ -1170,7 +1170,7 @@ public class BuildingController &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">44.3k</span>
+                        class="white-color">41.4k</span>
             
             
             

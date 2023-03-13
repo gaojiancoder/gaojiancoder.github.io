@@ -465,7 +465,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    1.5k
                 </div>
                 
 
@@ -558,72 +558,72 @@
 <li><p>请求乱码</p>
 </li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">&#x2F;&#x2F;1. 接收参数
-&#x2F;&#x2F;1.1 必须要写在接收参数之前
-request.setCharacterEncoding(&quot;UTF-8&quot;);
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token comment">//1. 接收参数</span>
+<span class="token comment">//1.1 必须要写在接收参数之前</span>
+request<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-String username &#x3D; request.getParameter(&quot;username&quot;);
-String password &#x3D; request.getParameter(&quot;password&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token class-name">String</span> username <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"username"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token class-name">String</span> password <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"password"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-2-2HttpServletResponse对象"><a href="#3-2-2HttpServletResponse对象" class="headerlink" title="3.2.2HttpServletResponse对象"></a>3.2.2HttpServletResponse对象</h3><ul>
 <li>输出乱码</li>
 </ul>
- <pre class="line-numbers language-java" data-language="java"><code class="language-java">response.setCharacterEncoding(&quot;UTF-8&quot;);
-&#x2F;&#x2F;  response.setHeader(&quot;Content-type&quot;, &quot;text&#x2F;html;charset&#x3D;UTF-8&quot;);
-response.setContentType(&quot;text&#x2F;html;charset&#x3D;UTF-8&quot;);<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+ <pre class="line-numbers language-java" data-language="java"><code class="language-java">response<span class="token punctuation">.</span><span class="token function">setCharacterEncoding</span><span class="token punctuation">(</span><span class="token string">"UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//  response.setHeader("Content-type", "text/html;charset=UTF-8");</span>
+response<span class="token punctuation">.</span><span class="token function">setContentType</span><span class="token punctuation">(</span><span class="token string">"text/html;charset=UTF-8"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="3-3Servlet配置"><a href="#3-3Servlet配置" class="headerlink" title="3.3Servlet配置"></a>3.3Servlet配置</h2><h3 id="3-3-1注解配置"><a href="#3-3-1注解配置" class="headerlink" title="3.3.1注解配置"></a>3.3.1注解配置</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.woniu.servlet.web;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+<h2 id="3-3Servlet配置"><a href="#3-3Servlet配置" class="headerlink" title="3.3Servlet配置"></a>3.3Servlet配置</h2><h3 id="3-3-1注解配置"><a href="#3-3-1注解配置" class="headerlink" title="3.3.1注解配置"></a>3.3.1注解配置</h3><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>web</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">WebServlet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServlet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletRequest</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletResponse</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
 
-&#x2F;**
+<span class="token comment">/**
  * name : servlet-name
  * value : url 访问地址
  * loadOnStartup :设置启动速度
- *&#x2F;
-@WebServlet(name &#x3D; &quot;helloServlet&quot;, value &#x3D; &quot;&#x2F;helloServelt&quot;, loadOnStartup &#x3D; 0)
-public class HelloServlet extends HttpServlet &#123;
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        response.getWriter().write(&quot;ok&quot;);
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ */</span>
+<span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">"helloServlet"</span><span class="token punctuation">,</span> value <span class="token operator">=</span> <span class="token string">"/helloServelt"</span><span class="token punctuation">,</span> loadOnStartup <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HelloServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">&#123;</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+        response<span class="token punctuation">.</span><span class="token function">getWriter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span><span class="token string">"ok"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="3-4请求转发和重定向"><a href="#3-4请求转发和重定向" class="headerlink" title="3.4请求转发和重定向"></a>3.4请求转发和重定向</h2><h3 id="3-4-1请求转发"><a href="#3-4-1请求转发" class="headerlink" title="3.4.1请求转发"></a>3.4.1请求转发</h3><p>地址栏不进行跳转 页面进行跳转</p>
 <h3 id="3-4-2重定向"><a href="#3-4-2重定向" class="headerlink" title="3.4.2重定向"></a>3.4.2重定向</h3><p>进行两次请求 地址栏URL发生改变</p>
- <pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.woniu.servlet.web;
+ <pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>web</span><span class="token punctuation">;</span>
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletException</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">WebServlet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServlet</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletRequest</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>http<span class="token punctuation">.</span></span><span class="token class-name">HttpServletResponse</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
 
-@WebServlet(&quot;&#x2F;forwardServlet&quot;)
-public class ForwardServlet extends HttpServlet &#123;
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
+<span class="token annotation punctuation">@WebServlet</span><span class="token punctuation">(</span><span class="token string">"/forwardServlet"</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ForwardServlet</span> <span class="token keyword">extends</span> <span class="token class-name">HttpServlet</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doPost</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
 
-    &#125;
+    <span class="token punctuation">&#125;</span>
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;
-        &#x2F;&#x2F;1. 接收请求参数：f : 表示进行请求转发， r ：表示进行重定向 （这是我自定义的，不表示真正有具体的操作）
-        String method &#x3D; request.getParameter(&quot;name&quot;);
-        &#x2F;&#x2F;2. 进行判断
-        if (&quot;f&quot;.equals(method)) &#123; &#x2F;&#x2F; 进行请求转发
-            &#x2F;&#x2F; 这个地址可以时一个servlet，也可以是jsp
-            request.getRequestDispatcher(&quot;&#x2F;main.jsp&quot;).forward(request, response); &#x2F;&#x2F; 请求转发
-        &#125;else if (&quot;r&quot;.equals(method)) &#123; &#x2F;&#x2F; 进行重定向
-            response.sendRedirect(&quot;&#x2F;003JavaWeb&#x2F;helloServelt&quot;); &#x2F;&#x2F; 重定向
-        &#125;else &#123;
-            System.out.println(&quot;输入有无：请输入：f[请求转发] or r[重定向]&quot;);
-        &#125;
-    &#125;
-&#125;
+    <span class="token keyword">protected</span> <span class="token keyword">void</span> <span class="token function">doGet</span><span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">HttpServletResponse</span> response<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+        <span class="token comment">//1. 接收请求参数：f : 表示进行请求转发， r ：表示进行重定向 （这是我自定义的，不表示真正有具体的操作）</span>
+        <span class="token class-name">String</span> method <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getParameter</span><span class="token punctuation">(</span><span class="token string">"name"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//2. 进行判断</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"f"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 进行请求转发</span>
+            <span class="token comment">// 这个地址可以时一个servlet，也可以是jsp</span>
+            request<span class="token punctuation">.</span><span class="token function">getRequestDispatcher</span><span class="token punctuation">(</span><span class="token string">"/main.jsp"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forward</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 请求转发</span>
+        <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token string">"r"</span><span class="token punctuation">.</span><span class="token function">equals</span><span class="token punctuation">(</span>method<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span> <span class="token comment">// 进行重定向</span>
+            response<span class="token punctuation">.</span><span class="token function">sendRedirect</span><span class="token punctuation">(</span><span class="token string">"/003JavaWeb/helloServelt"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 重定向</span>
+        <span class="token punctuation">&#125;</span><span class="token keyword">else</span> <span class="token punctuation">&#123;</span>
+            <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"输入有无：请输入：f[请求转发] or r[重定向]"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-4-3请求转发和重定向的区别"><a href="#3-4-3请求转发和重定向的区别" class="headerlink" title="3.4.3请求转发和重定向的区别"></a>3.4.3请求转发和重定向的区别</h3><ul>
@@ -646,62 +646,62 @@ public class ForwardServlet extends HttpServlet &#123;
 </ul>
 </li>
 </ul>
-<h1 id="4-过滤器和监听器"><a href="#4-过滤器和监听器" class="headerlink" title="4.过滤器和监听器"></a>4.过滤器和监听器</h1><h2 id="4-1过滤器的介绍"><a href="#4-1过滤器的介绍" class="headerlink" title="4.1过滤器的介绍"></a>4.1过滤器的介绍</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.woniu.javaweb.web.filter;
+<h1 id="4-过滤器和监听器"><a href="#4-过滤器和监听器" class="headerlink" title="4.过滤器和监听器"></a>4.过滤器和监听器</h1><h2 id="4-1过滤器的介绍"><a href="#4-1过滤器的介绍" class="headerlink" title="4.1过滤器的介绍"></a>4.1过滤器的介绍</h2><pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>javaweb<span class="token punctuation">.</span>web<span class="token punctuation">.</span>filter</span><span class="token punctuation">;</span>
 
-import javax.servlet.*;
-import javax.servlet.annotation.WebFilter;
-import java.io.IOException;
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token operator">*</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">WebFilter</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">java<span class="token punctuation">.</span>io<span class="token punctuation">.</span></span><span class="token class-name">IOException</span><span class="token punctuation">;</span>
 
-@WebFilter(&quot;&#x2F;*&quot;) &#x2F;&#x2F; 过滤路径:这个配置表示过滤所有的web资源
-public class ALoginFilter implements Filter &#123;
+<span class="token annotation punctuation">@WebFilter</span><span class="token punctuation">(</span><span class="token string">"/*"</span><span class="token punctuation">)</span> <span class="token comment">// 过滤路径:这个配置表示过滤所有的web资源</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">ALoginFilter</span> <span class="token keyword">implements</span> <span class="token class-name">Filter</span> <span class="token punctuation">&#123;</span>
 
-    &#x2F;&#x2F; 临死之前
-    public void destroy() &#123;
-    &#125;
+    <span class="token comment">// 临死之前</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token punctuation">&#125;</span>
 
-    &#x2F;&#x2F; 每次经过过滤路径都会调用一次
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException &#123;
-            chain.doFilter(request, response); &#x2F;&#x2F; 放行， 当我们的过滤器调用了这个方法就表示，我们放行了过滤条件,就可以直接访问下一个url
-    &#125;
+    <span class="token comment">// 每次经过过滤路径都会调用一次</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doFilter</span><span class="token punctuation">(</span><span class="token class-name">ServletRequest</span> request<span class="token punctuation">,</span> <span class="token class-name">ServletResponse</span> response<span class="token punctuation">,</span> <span class="token class-name">FilterChain</span> chain<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span><span class="token punctuation">,</span> <span class="token class-name">IOException</span> <span class="token punctuation">&#123;</span>
+            chain<span class="token punctuation">.</span><span class="token function">doFilter</span><span class="token punctuation">(</span>request<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 放行， 当我们的过滤器调用了这个方法就表示，我们放行了过滤条件,就可以直接访问下一个url</span>
+    <span class="token punctuation">&#125;</span>
 
-    &#x2F;&#x2F; 出生之后
-    public void init(FilterConfig config) throws ServletException &#123;
+    <span class="token comment">// 出生之后</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">FilterConfig</span> config<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span> <span class="token punctuation">&#123;</span>
 
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="4-2监听器的介绍"><a href="#4-2监听器的介绍" class="headerlink" title="4.2监听器的介绍"></a>4.2监听器的介绍</h2><ul>
 <li>ServletContextListener : 监听ServletContext对象的创建与销毁</li>
 <li>HttpSessionListener ： 监听HttpSession的创建与销毁</li>
 <li>ServeltRequestListener ： 监听ServletRequest的创建与销毁</li>
 </ul>
-<pre class="line-numbers language-java" data-language="java"><code class="language-java">package com.woniu.javaweb.web.listener;
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">package</span> <span class="token namespace">com<span class="token punctuation">.</span>woniu<span class="token punctuation">.</span>javaweb<span class="token punctuation">.</span>web<span class="token punctuation">.</span>listener</span><span class="token punctuation">;</span>
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletContextEvent</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span></span><span class="token class-name">ServletContextListener</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token namespace">javax<span class="token punctuation">.</span>servlet<span class="token punctuation">.</span>annotation<span class="token punctuation">.</span></span><span class="token class-name">WebListener</span><span class="token punctuation">;</span>
 
-@WebListener
-public class MyServletContextListener implements ServletContextListener &#123;
+<span class="token annotation punctuation">@WebListener</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">MyServletContextListener</span> <span class="token keyword">implements</span> <span class="token class-name">ServletContextListener</span> <span class="token punctuation">&#123;</span>
 
-    &#x2F;**
+    <span class="token comment">/**
      * 初始化方法，这个方法会在serveltcontext创建的时候被调用一次
      * @param sce
-     *&#x2F;
-    @Override
-    public void contextInitialized(ServletContextEvent e) &#123;
-        System.out.println(&quot;------&gt;&quot;);
-    &#125;
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">contextInitialized</span><span class="token punctuation">(</span><span class="token class-name">ServletContextEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"------>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
 
-    &#x2F;**
+    <span class="token comment">/**
      * 销毁方法，他会servletcontext被tomcat干掉的时候，调用一次
      * @param sce
-     *&#x2F;
-    @Override
-    public void contextDestroyed(ServletContextEvent e) &#123;
-        System.out.println(&quot;******&gt;&quot;);
-    &#125;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+     */</span>
+    <span class="token annotation punctuation">@Override</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">contextDestroyed</span><span class="token punctuation">(</span><span class="token class-name">ServletContextEvent</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"******>"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">&#125;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h1 id="5-Cookie-和-Session"><a href="#5-Cookie-和-Session" class="headerlink" title="5.Cookie 和 Session"></a>5.Cookie 和 Session</h1><ul>
 <li>Cookie : 当浏览器访问web服务器的时候，web服务器在响应的时候在HTTP的响应头中附带传送给浏览器的一小段数据。</li>
@@ -1062,7 +1062,7 @@ public class MyServletContextListener implements ServletContextListener &#123;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">44.3k</span>
+                        class="white-color">41.4k</span>
             
             
             

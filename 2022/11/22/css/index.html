@@ -501,12 +501,12 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="CSS"><a href="#CSS" class="headerlink" title="CSS"></a>CSS</h1><h2 id="1-声明CSS"><a href="#1-声明CSS" class="headerlink" title="1.声明CSS"></a>1.声明CSS</h2><h3 id="1-1行内样式"><a href="#1-1行内样式" class="headerlink" title="1.1行内样式"></a>1.1行内样式</h3><p>直接写在标签内部，行内样式只能对当前标签起作用</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css">渲染规则</span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css">渲染规则</span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span>
     
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>ul</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="1-2内嵌样式"><a href="#1-2内嵌样式" class="headerlink" title="1.2内嵌样式"></a>1.2内嵌样式</h3><p>内嵌样式一般写在{}部分，内嵌的样式可以对当前页面的所有指定元素进行渲染</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
@@ -534,7 +534,7 @@
   <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
 <span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -548,7 +548,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="2-选择器"><a href="#2-选择器" class="headerlink" title="2.选择器"></a>2.选择器</h2><p>它的作用：帮助CSS样式选择html网页中的指定的标签来进行渲染</p>
-<h3 id="2-1简单选择器"><a href="#2-1简单选择器" class="headerlink" title="2.1简单选择器"></a>2.1简单选择器</h3><h4 id="2-1-1元素选择器"><a href="#2-1-1元素选择器" class="headerlink" title="2.1.1元素选择器"></a>2.1.1元素选择器</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html">p &#123; /* 对所有的p标签进行渲染 */
+<h3 id="2-1简单选择器"><a href="#2-1简单选择器" class="headerlink" title="2.1简单选择器"></a>2.1简单选择器</h3><h4 id="2-1-1元素选择器"><a href="#2-1-1元素选择器" class="headerlink" title="2.1.1元素选择器"></a>2.1.1元素选择器</h4><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">p &#123; /* 对所有的p标签进行渲染 */
   color: red;
   font-family: 华文行楷;
   font-size: 20px;
@@ -556,7 +556,7 @@
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>标签名称是什么，在渲染的时候就写什么名称</p>
-<h4 id="2-1-2-ID选择器"><a href="#2-1-2-ID选择器" class="headerlink" title="2.1.2 ID选择器"></a>2.1.2 ID选择器</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<h4 id="2-1-2-ID选择器"><a href="#2-1-2-ID选择器" class="headerlink" title="2.1.2 ID选择器"></a>2.1.2 ID选择器</h4><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -575,7 +575,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>我们可以通过id选择器获取到唯一的元素标签，但是由于每个标签中的id值是唯一的，所以，id选择器只能获取到一个元素标签进行渲染</p>
-<h4 id="2-1-3-Class选择器"><a href="#2-1-3-Class选择器" class="headerlink" title="2.1.3 Class选择器"></a>2.1.3 Class选择器</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<h4 id="2-1-3-Class选择器"><a href="#2-1-3-Class选择器" class="headerlink" title="2.1.3 Class选择器"></a>2.1.3 Class选择器</h4><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -599,7 +599,7 @@
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-2复合选择器"><a href="#2-2复合选择器" class="headerlink" title="2.2复合选择器"></a>2.2复合选择器</h3><h4 id="2-2-1-属性选择器"><a href="#2-2-1-属性选择器" class="headerlink" title="2.2.1 属性选择器"></a>2.2.1 属性选择器</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<h3 id="2-2复合选择器"><a href="#2-2复合选择器" class="headerlink" title="2.2复合选择器"></a>2.2复合选择器</h3><h4 id="2-2-1-属性选择器"><a href="#2-2-1-属性选择器" class="headerlink" title="2.2.1 属性选择器"></a>2.2.1 属性选择器</h4><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -625,7 +625,7 @@
 <p>hover：当鼠标悬浮在指定元素上</p>
 <p>active：当鼠标点击的时候</p>
 <p>visited：鼠标点击之后的</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -646,7 +646,7 @@
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h4 id="2-2-3-层级选择器"><a href="#2-2-3-层级选择器" class="headerlink" title="2.2.3 层级选择器"></a>2.2.3 层级选择器</h4><p>可以根据html的层级关系来进行定位元素</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">/* 后代选择器 */
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">/* 后代选择器 */
 选择器1 选择器2 &#123;
   
 &#125;
@@ -685,7 +685,7 @@
 <p>font-family：字样样式：仿宋、黑体、楷体。。。</p>
 <p>font-style：字体样式：斜体、加粗、正常</p>
 <p>font-weight：粗体样式:100~700</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span> <span class="token property">font-family</span><span class="token punctuation">:</span> </span><span class="token punctuation">"</span></span></span><span class="token attr-name">黑体";</span> <span class="token attr-name"><span class="token namespace">font-weight:</span></span> <span class="token attr-name">700;</span> <span class="token attr-name"><span class="token namespace">font-style:</span>italic"</span><span class="token punctuation">></span></span>我在蜗牛学JAVA<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value css language-css"><span class="token property">font-size</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span> <span class="token property">font-family</span><span class="token punctuation">:</span> </span><span class="token punctuation">"</span></span></span><span class="token attr-name">黑体";</span> <span class="token attr-name"><span class="token namespace">font-weight:</span></span> <span class="token attr-name">700;</span> <span class="token attr-name"><span class="token namespace">font-style:</span>italic"</span><span class="token punctuation">></span></span>我在蜗牛学JAVA<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>color : 设置文本颜色：单词、十六进制</p>
 <p>text-indent : 缩进文本中的首行</p>
@@ -693,7 +693,7 @@
 <p>text-align ： 文本水平对齐方式</p>
 <p>text-height ： 文本的行高</p>
 <p>text-shadow : 文本的阴影效果</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -720,7 +720,7 @@
 <p>background-image:背景图片</p>
 <p>background-repeat:设置背景图片的平铺</p>
 <p>background-position:改变图片在背景中的位置</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -747,7 +747,7 @@
 <p>list-style-type: 改变列表的标识类型</p>
 <p>list-style-image: 使用图片的方式作为列表的点</p>
 <p>list-style-postion：列表的位置</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -771,7 +771,7 @@
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="4-4表格样式"><a href="#4-4表格样式" class="headerlink" title="4.4表格样式"></a>4.4表格样式</h3><h4 id="4-4-1-border-实体线"><a href="#4-4-1-border-实体线" class="headerlink" title="4.4.1   border 实体线"></a>4.4.1   border 实体线</h4><h4 id="4-4-2-width-amp-height-表格大小"><a href="#4-4-2-width-amp-height-表格大小" class="headerlink" title="4.4.2  width &amp; height 表格大小"></a>4.4.2  width &amp; height 表格大小</h4><h4 id="4-4-3-border-collapse合并表格边框"><a href="#4-4-3-border-collapse合并表格边框" class="headerlink" title="4.4.3 border-collapse合并表格边框"></a>4.4.3 border-collapse合并表格边框</h4><h4 id="4-4-4-vertical-align用于设置th或者td的垂直对齐。默认td和th都是垂直居中对齐"><a href="#4-4-4-vertical-align用于设置th或者td的垂直对齐。默认td和th都是垂直居中对齐" class="headerlink" title="4.4.4 vertical-align用于设置th或者td的垂直对齐。默认td和th都是垂直居中对齐"></a>4.4.4 vertical-align用于设置th或者td的垂直对齐。默认td和th都是垂直居中对齐</h4><h4 id="4-4-5-可悬停表格"><a href="#4-4-5-可悬停表格" class="headerlink" title="4.4.5 可悬停表格"></a>4.4.5 可悬停表格</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="4-4表格样式"><a href="#4-4表格样式" class="headerlink" title="4.4表格样式"></a>4.4表格样式</h3><h4 id="4-4-1-border-实体线"><a href="#4-4-1-border-实体线" class="headerlink" title="4.4.1   border 实体线"></a>4.4.1   border 实体线</h4><h4 id="4-4-2-width-amp-height-表格大小"><a href="#4-4-2-width-amp-height-表格大小" class="headerlink" title="4.4.2  width &amp; height 表格大小"></a>4.4.2  width &amp; height 表格大小</h4><h4 id="4-4-3-border-collapse合并表格边框"><a href="#4-4-3-border-collapse合并表格边框" class="headerlink" title="4.4.3 border-collapse合并表格边框"></a>4.4.3 border-collapse合并表格边框</h4><h4 id="4-4-4-vertical-align用于设置th或者td的垂直对齐。默认td和th都是垂直居中对齐"><a href="#4-4-4-vertical-align用于设置th或者td的垂直对齐。默认td和th都是垂直居中对齐" class="headerlink" title="4.4.4 vertical-align用于设置th或者td的垂直对齐。默认td和th都是垂直居中对齐"></a>4.4.4 vertical-align用于设置th或者td的垂直对齐。默认td和th都是垂直居中对齐</h4><h4 id="4-4-5-可悬停表格"><a href="#4-4-5-可悬停表格" class="headerlink" title="4.4.5 可悬停表格"></a>4.4.5 可悬停表格</h4><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="5网页布局"><a href="#5网页布局" class="headerlink" title="5网页布局"></a>5网页布局</h2><h3 id="5-1盒子模型"><a href="#5-1盒子模型" class="headerlink" title="5.1盒子模型"></a>5.1盒子模型</h3><p>在网页中的所有的元素都可以看成为一个盒子</p>
 <p><img src="/2022/11/22/css/image.png"></p>
@@ -780,7 +780,7 @@
 <p>margin-top: 10px</p>
 <p>如果要设置外边距居中：</p>
 <p>margin: 0 auto;</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -810,7 +810,7 @@
 <h3 id="5-3内边距"><a href="#5-3内边距" class="headerlink" title="5.3内边距"></a>5.3内边距</h3><p>padding-left: 30px;<br>padding-top: 30px;<br>padding-right: 30px;</p>
 <h3 id="5-4边框"><a href="#5-4边框" class="headerlink" title="5.4边框"></a>5.4边框</h3><p>border: 1px solid red;</p>
 <h3 id="5-5元素的浮动"><a href="#5-5元素的浮动" class="headerlink" title="5.5元素的浮动"></a>5.5元素的浮动</h3><p>float：漂浮</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -854,7 +854,7 @@
 
 <p><img src="/2022/11/22/css/%E6%BC%82%E6%B5%AE.png"></p>
 <h3 id="5-6浮动的塌陷问题"><a href="#5-6浮动的塌陷问题" class="headerlink" title="5.6浮动的塌陷问题"></a>5.6浮动的塌陷问题</h3><p>浮动塌陷：当个某个父元素的高度为自适应，并且父元素中的子元素使用了浮动，这种情况就称为浮动的塌陷</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -909,7 +909,7 @@
 <p><img src="/2022/11/22/css/%E6%B5%AE%E5%8A%A8%E5%A1%8C%E9%99%B7.png"></p>
 <h3 id="5-7定位"><a href="#5-7定位" class="headerlink" title="5.7定位"></a>5.7定位</h3><h4 id="5-7-1相对定位"><a href="#5-7-1相对定位" class="headerlink" title="5.7.1相对定位"></a>5.7.1相对定位</h4><p>在元素原来的位置上发生相对的偏移（相对的父元素而言，也就是说是根据父元素的移动，子元素也会移动）tip:可以这么理解，相对定位就是以父元素的左上角为原点。</p>
 <p>position: relative;</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html">#_div2 &#123;
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup">#_div2 &#123;
   width: 100px;
   height: 100px;
   background-color: coral;
@@ -932,7 +932,7 @@
 </ul>
 <h4 id="5-7-3固定位置"><a href="#5-7-3固定位置" class="headerlink" title="5.7.3固定位置"></a>5.7.3固定位置</h4><p>将元素固定到屏幕中的某个位置</p>
 <p>position: fixed;</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -953,7 +953,7 @@
 
 
 <h4 id="5-7-4z-index"><a href="#5-7-4z-index" class="headerlink" title="5.7.4z-index"></a>5.7.4z-index</h4><p>它是用来设置层级关系的，数字越大，说明设置的越在上层。当元素开启定位之后，就可以使用这个属性。z-index的默认值是0</p>
-<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>
 	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>
 		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
@@ -1336,7 +1336,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">44.3k</span>
+                        class="white-color">41.4k</span>
             
             
             
